@@ -44,7 +44,7 @@
     </div>
     <div class="container footer2">
       <div class="copyright">
-        <p>&copy <?php echo date('Y')?> Cambridge Resources. All rights reserved.</p>
+        <p>&copy <?php echo date('Y')?> LDR Global Industries. All rights reserved.</p>
       </div>
       <div class="footer-socialmedia">
         <a class="navi-margin s-icon" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cambridgeresources/">

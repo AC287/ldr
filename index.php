@@ -23,7 +23,7 @@
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
-    <li data-target="#myCarousel" data-slide-to="4"></li>
+    <!-- <li data-target="#myCarousel" data-slide-to="4"></li> -->
     <!-- <li data-target="#myCarousel" data-slide-to="5"></li> -->
     <!-- <li data-target="#myCarousel" data-slide-to="3"></li> -->
   </ol>
@@ -41,8 +41,8 @@
       </div>
     </div>
 
-    <div class="item">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_02.jpg">
+    <!-- <div class="item">
+      <img src="<?php //bloginfo('template_directory')?>/images/banners/ldr_02.jpg">
       <div class="index-banner-textbox ibt-img2">
         <div class="ibt-text">
           <span>PLUMBING FROM A TO Z</span>
@@ -50,24 +50,13 @@
         <div class="ibt-underline">
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="item">
       <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_03.jpg">
       <div class="index-banner-textbox ibt-img3">
         <div class="ibt-text">
           <span>BEST IN CLASS MERCHANDISING</span>
-        </div>
-        <div class="ibt-underline">
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_04.jpg">
-      <div class="index-banner-textbox ibt-img4">
-        <div class="ibt-text">
-          <span>TRADITIONAL COMPANY WITH UNTRADITIONAL IDEAS</span>
         </div>
         <div class="ibt-underline">
         </div>
@@ -85,6 +74,18 @@
       </div>
     </div>
 
+    <div class="item">
+      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_04.jpg">
+      <div class="index-banner-textbox ibt-img4">
+        <div class="ibt-text">
+          <span>TRADITIONAL COMPANY WITH UNTRADITIONAL IDEAS</span>
+        </div>
+        <div class="ibt-underline">
+        </div>
+      </div>
+    </div>
+
+
     <!-- <div class="item"> -->
       <!-- <img src="images/image001.jpg"> -->
     <!-- </div> -->
@@ -101,53 +102,63 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 <!--  GENERAL-CATEGORY -->
 <div class="general-category">
   <div class="container">
-    <div class="gc-block-container">
-      <div class="hvac gc-block">
-        <div class="hvac gc-desc-img">
-          <img src="<?php bloginfo('template_directory')?>/images/hvac02.png"></img>
-          <span class="gc-block-title"><br/>HVAC</span>
+
+    <div class="gc-overallinnercontainer">
+
+      <div class="gc-indexcontainer">
+        <div class="gc-indeximages">
+          <img src="<?php bloginfo('template_directory')?>/images/icons/home-faucet.svg">
         </div>
-        <div class="hvac gc-desc-txt">
-          <p class="hvac-desc">Cambridge is one of the leading manufacturers of premium HVAC products in the United States. Cambridge has been manufacturing HVAC products for more than 15 years for over 250 HVAC industry distributors. </p>
+        <div class="gc-txtbox">
+          <div class="gc-indextitle">
+            <p>Fashion</p>
+          </div>
+          <div class="gc-indextxt">
+            <p>LDR carries a complete line of high quality fashion plumbing kitchen, bath and laundry products. The product offering covers accessories, organization, and safety.</p>
+            <p>LDR offers both old school nostalgic  items useful when replacing old parts, and cutting edge modern products ready to make any space shine.</p>
+          </div>
         </div>
-        <!-- <a href=""><i>CATALOG DOWNLOAD</i></a> -->
       </div>
-      <div class="plumbing gc-block">
-        <div class="plumbing gc-desc-img">
-          <img src="<?php bloginfo('template_directory')?>/images/plumbing02.png"></img>
-          <span class="gc-block-title"><br/>PLUMBING</span>
+
+      <div class="gc-indexcontainer">
+        <div class="gc-indeximages">
+          <img src="<?php bloginfo('template_directory')?>/images/icons/home-rough.svg">
         </div>
-        <div class="hvac gc-desc-txt">
-          <p class="plumbing-desc">Cambridge offers a full line of fittings, nipples, pipe, hose clamps, gas connectors, and pipe hanging products specially designed for the plumbing industry.</p>
+        <div class="gc-txtbox">
+          <div class="gc-indextitle">
+            <p>Rough</p>
+          </div>
+          <div class="gc-indextxt">
+            <p>LDR's rough line is comprised of over 4,000 rough plumbing sku's made from black, galvanized, copper, brass, and plastic.</p>
+            <p>With LDR's rail system which includes channel and rail cards, and their slanted cut case box design, the rough products are easy to find even on lower shelves.</p>
+          </div>
         </div>
-        <!-- <a href=""><i>CATALOG DOWNLOAD</i></a> -->
       </div>
-      <div class="electrical gc-block">
-        <div class="electrical gc-desc-img">
-          <img src="<?php bloginfo('template_directory')?>/images/electrical02.png"></img>
-          <span class="gc-block-title"><br/>ELECTRICAL</span>
+
+      <div class="gc-indexcontainer">
+        <div class="gc-indeximages">
+          <img src="<?php bloginfo('template_directory')?>/images/icons/home-repair.svg">
         </div>
-        <div class="hvac gc-desc-txt">
-          <p class="electrical-desc">Electrical contractors have trusted Cambridge branded cable ties, wire connectors, terminals, and other electrical products for many years. Cambridge has hundreds of SKUs available at over 10,000 electrical supply distributors and retail locations across the U.S.</p>
+        <div class="gc-txtbox">
+          <div class="gc-indextitle">
+            <p>Repair</p>
+          </div>
+          <div class="gc-indextxt">
+            <p>LDR offers an extensive line of carded plumbing repair products, specializing in pipe repair, water supply, and sink and faucet repair.</p>
+            <p>The packaging clearly defines which category the item belongs to and is color coded to size making it very easy for consumers to shop.</p>
+          </div>
         </div>
-        <!-- <a href=""><i>CATALOG DOWNLOAD</i></a> -->
       </div>
-      <div class="automotive gc-block">
-        <div class="automotive gc-desc-img">
-          <img src="<?php bloginfo('template_directory')?>/images/automotive02.png"></img>
-          <span class="gc-block-title"><br/>AUTOMOTIVE</span>
-        </div>
-        <div class="hvac gc-desc-txt">
-          <p class="automotive-desc">Cambridge is a trusted brand in the retail automotive market, supplying hose clamps, fuel injectors, wire connectors, terminals, switches and more.  </p>
-        </div>
-        <!-- <a href=""><i>CATALOG DOWNLOAD</i></a> -->
-      </div>
-    </div> <!-- end gc-block-container -->
+
+    </div>  <!--  end gc-overallinnercontainer -->
+
+
   </div> <!-- end container -->
-</div> <!-- end general-category row-->
+</div> <!-- end general-category-->
 <!--  MID-MENU  -->
 <div class="mid-menu">
   <div class="container">
@@ -165,41 +176,43 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <div class="index-midcategory" data-toggle="collapse" data-target="#imc-distribution">
-          <!-- <img src="<?php bloginfo('template_directory')?>/images/distribution01.png"></img> -->
-          <div class="index-midcategory-imgholder index-distribution"></div>
-          <div class="mc-header" >DISTRIBUTION</div>
-        </div>
-        <div class="collapse index-midcategory-contents" id="imc-distribution">
-          <div class="mc-border">INDUSTRY DISTRIBUTORS <br/>CARRY CAMBRIDGE</div>
-          <div class="mc-txt">
-            <p>Cambridge manufactures products and sells to a variety of industry wholesalers, distributors, and importers. Cambridge has a dedicated team of sales professionals who are extremely knowledgable in their respective industries.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="index-midcategory" data-toggle="collapse" data-target="#imc-retail">
-          <!-- <img src="<?php bloginfo('template_directory')?>/images/retail01.png"></img> -->
-          <div class="index-midcategory-imgholder index-retail"></div>
+        <div class="index-midcategory" data-toggle="collapse" data-target="#imc-indexretail">
+          <!-- <img src="<?php //bloginfo('template_directory')?>/images/distribution01.png"></img> -->
+          <div class="index-midcategory-imgholder index-indexretail"></div>
           <div class="mc-header" >RETAIL</div>
         </div>
-        <div class="collapse index-midcategory-contents" id="imc-retail">
-          <div class="mc-border">INTERNATIONAL RETAILERS <br/>SELL CAMBRIDGE</div>
+        <div class="collapse index-midcategory-contents" id="imc-indexretail">
+          <!-- <div class="mc-border">INDUSTRY DISTRIBUTORS <br/>CARRY CAMBRIDGE</div> -->
           <div class="mc-txt">
-            <p>Retail consumers are drawn to our state-of-the-art branding, and find the entire shopping experience fast and easy since the pertinent product information is readily accessible. With over 1,000 SKUs in over 15,000 retail locations across the USA and Canada, Cambridge continues to pop up in many new locations.</p>
+            <p>LDR has a firm understanding of the retail marketplace giving your retail space a great edge.</p>
+            <p>LDR's label and UPC color coding system allows easy shopping for the customer and quick restocking by store personnel. The small pack quantities allow for quick turn around.</p>
+            <p>LDR's ability to customize product assortments, program updates, and  competitive pricing makes us the retailers #1 choice.</p>
           </div>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="index-midcategory" data-toggle="collapse" data-target="#imc-oem">
-          <!-- <img src="<?php bloginfo('template_directory')?>/images/oem01.png"></img> -->
-          <div class="index-midcategory-imgholder index-oem"></div>
-          <div class="mc-header" >O.E.M.</div>
+        <div class="index-midcategory" data-toggle="collapse" data-target="#imc-index2step">
+          <!-- <img src="<?php bloginfo('template_directory')?>/images/retail01.png"></img> -->
+          <div class="index-midcategory-imgholder index-index2step"></div>
+          <div class="mc-header" >2 STEP DISTRIBUTION</div>
         </div>
-        <div class="collapse index-midcategory-contents" id="imc-oem">
-          <div class="mc-border">ORIGINAL EQUIPMENT <br/>MANUFACTURER</div>
+        <div class="collapse index-midcategory-contents" id="imc-index2step">
+          <!-- <div class="mc-border">INTERNATIONAL RETAILERS <br/>SELL CAMBRIDGE</div> -->
           <div class="mc-txt">
-            <p>Cambridge supplies its premium industrial products to many OEMs across a variety of industries. OEMs use Cambridge products in their manufacturing process because they can trust its quality.</p>
+            <p>LDR's two-step distribution process keeps the product easily accessible to the distributor. Global access points, and local headquartered support allow for quick turn around and instant service.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="index-midcategory" data-toggle="collapse" data-target="#imc-indexwholesale">
+          <!-- <img src="<?php bloginfo('template_directory')?>/images/oem01.png"></img> -->
+          <div class="index-midcategory-imgholder index-indexwholesale"></div>
+          <div class="mc-header" >WHOLESALE</div>
+        </div>
+        <div class="collapse index-midcategory-contents" id="imc-indexwholesale">
+          <!-- <div class="mc-border">ORIGINAL EQUIPMENT <br/>MANUFACTURER</div> -->
+          <div class="mc-txt">
+            <p>LDR caters to the wholesale market by offering bulk options for most of their sku's.</p>
           </div>
         </div>
       </div>

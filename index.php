@@ -67,7 +67,7 @@
       <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_05.jpg">
       <div class="index-banner-textbox ibt-img5">
         <div class="ibt-text">
-          <span>NEVER ROUGH AROUND THE EDGES</span>
+          <span>NOT ROUGH AROUND THE EDGES</span>
         </div>
         <div class="ibt-underline">
         </div>

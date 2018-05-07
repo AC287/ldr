@@ -560,23 +560,23 @@ a.s-icon {
 }*/
 .index-midcategory-imgholder:hover ~ .mc-header,
 .index-midcategory[aria-expanded="true"] .mc-header {
-  color: #E2231A;
+  color: #A3333B;
 }
 .index-midcategory-imgholder.index-indexretail:hover,
 .index-midcategory[aria-expanded="true"] .index-indexretail {
-  background-image: url('../images/icons/home-retail.svg');
+  background-image: url('../images/icons/home-retail-h.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-.index-midcategory-imgholder.index-retail:hover,
+.index-midcategory-imgholder.index-index2step:hover,
 .index-midcategory[aria-expanded="true"] .index-index2step {
-  background-image: url('../images/icons/home-2stepdistribution.svg');
+  background-image: url('../images/icons/home-2stepdistribution-h.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-.index-midcategory-imgholder.index-oem:hover,
+.index-midcategory-imgholder.index-indexwholesale:hover,
 .index-midcategory[aria-expanded="true"] .index-indexwholesale {
-  background-image: url('../images/icons/home-wholesale.svg');
+  background-image: url('../images/icons/home-wholesale-h.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }

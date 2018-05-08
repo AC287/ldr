@@ -51,7 +51,7 @@
 					<img src="<?php bloginfo('template_directory')?>/images/icons/whyus-marketresearch.svg">
 				</div>
 				<div class="about-whyus-block-txt">
-					<p>MARKET RESEARCH & CATEGORY EXPERTISE</p>
+					<p>Market research &amp; category expertise</p>
 				</div>
 			</div>
 			<div class="about-whyus-block-each">
@@ -59,7 +59,7 @@
 					<img src="<?php bloginfo('template_directory')?>/images/icons/whyus-consistentflow.svg">
 				</div>
 				<div class="about-whyus-block-txt">
-					<p>CONSISTENT FLOW OF NEW PRODUCTS</p>
+					<p>Consistent flow of new products</p>
 				</div>
 			</div>
 			<div class="about-whyus-block-each">
@@ -67,7 +67,7 @@
 					<img src="<?php bloginfo('template_directory')?>/images/icons/whyus-globalprodev.svg">
 				</div>
 				<div class="about-whyus-block-txt">
-					<p>DEDICATED GLOBAL PRODUCT DEVELOPMENT</p>
+					<p>Dedicated global product development</p>
 				</div>
 			</div>
 			<div class="about-whyus-block-each">
@@ -75,7 +75,7 @@
 					<img src="<?php bloginfo('template_directory')?>/images/icons/whyus-customerservice.svg">
 				</div>
 				<div class="about-whyus-block-txt">
-					<p>U.S. BASED CUSTOMER SERVICE AND SALES SUPPORT TEAM</p>
+					<p>U.S. based customer service and sales support team</p>
 				</div>
 			</div>
 			<div class="about-whyus-block-each">
@@ -83,7 +83,7 @@
 					<img src="<?php bloginfo('template_directory')?>/images/icons/whyus-qualityprod.svg">
 				</div>
 				<div class="about-whyus-block-txt">
-					<p>QUALITY PRODUCTS AT COMPETITIVE PRICE POINT</p>
+					<p>Quality products at competitive price point</p>
 				</div>
 			</div>
 			<div class="about-whyus-block-each">
@@ -91,7 +91,7 @@
 					<img src="<?php bloginfo('template_directory')?>/images/icons/whyus-globaldist.svg">
 				</div>
 				<div class="about-whyus-block-txt">
-					<p>GLOBAL DISTRIBUTION EFFICIENCY</p>
+					<p>Global distribution efficiency</p>
 				</div>
 			</div>
 		</div> <!--  end about-whyus-block-container  -->

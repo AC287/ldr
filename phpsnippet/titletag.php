@@ -54,6 +54,13 @@
       echo "<meta name='description' content='".htmlspecialchars($metatitleDB[0]->metadesc,ENT_QUOTES)."'>";
     break;
 
+    case (in_array('industries', $curLocationArr)):
+      //GET ABOUT TITLE AND META DESC TAG.
+      $metatitleDB = $wpdb->get_results("SELECT * FROM wp_cammetadesc WHERE page='industries';");
+      echo "<title>LDR | ".$metatitleDB[0]->title."</title>";
+      echo "<meta name='description' content='".htmlspecialchars($metatitleDB[0]->metadesc,ENT_QUOTES)."'>";
+    break;
+
     case (in_array('team', $curLocationArr)):
       //GET TEAM TITLE AND META DESC TAG.
       $metatitleDB = $wpdb->get_results("SELECT * FROM wp_cammetadesc WHERE page='team';");
@@ -96,7 +103,7 @@
 
     default:
     $metatitleDB = $wpdb->get_results("SELECT * FROM wp_cammetadesc WHERE page='home';");
-    echo "<title>LDR Resources</title>";
+    echo "<title>LDR Global Industries</title>";
     echo "<meta name='description' content='".htmlspecialchars($metatitleDB[0]->metadesc,ENT_QUOTES)."'>";
     break;
   }

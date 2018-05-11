@@ -96,16 +96,35 @@ $('.productaccordion-mobilemenu').click(function(){
   }
 })
 
+var paramCounter = 0;
+
 var m0param = getURLparam('m0');
+paramCountFunction(m0param);
+
 var s1param = getURLparam('s1');
+paramCountFunction(s1param);
+
 var s2param = getURLparam('s2');
-console.log(s2param);
+paramCountFunction(s2param);
+
+var s3param = getURLparam('s3');
+paramCountFunction(s3param);
+
+var s4param = getURLparam('s4');
+paramCountFunction(s4param);
+
+// console.log(s2param);
+console.log(paramCounter);
+
 var m0paramInner = '.m0-'+m0param;
 var s1paramInner = '.s1-'+s1param;
 var s2paramInner = '.s2-'+s2param;
+var s3paramInner = '.s3-'+s3param;
+var s4paramInner = '.s4-'+s4param;
 /*
   This is for current active section.
 */
+
 if(m0param) {
 
   // $(m0paramInner).next().toggleClass('show');
@@ -114,46 +133,73 @@ if(m0param) {
 
   $(m0paramInner).children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
 }
+
 if(s1param) {
 
-  // if(s2param){
-  //   $(s2paramInner).css({
-  //     'background-color':'#f7f7f7',
-  //   })
-  // }
-  // $(s1paramInner).next().toggleClass('show');
   $('.s1i-'+s1param).toggleClass('show');
 
   $(s1paramInner).children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
 }
-// if(!s2param) {
-//   if(s1param) {
-//     $(s1paramInner).css({
-//       'background-color':'#f7f7f7',
-//     })
-//   } else {
-//     $(m0paramInner).css({
-//       'background-color':'#f7f7f7',
-//     })
-//   }
+
+if(s2param) {
+
+  $('.s2i-'+s2param).toggleClass('show');
+
+  $(s2paramInner).children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
+}
+
+if(s3param) {
+
+  $('.s3i-'+s3param).toggleClass('show');
+
+  $(s3paramInner).children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
+}
+
+// if(s4param) {
+//
+//   $('.s4i-'+s4param).toggleClass('show');
+//
+//   $(s4paramInner).children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
 // }
 
-if(m0param && s1param && s2param) {
-  $('.m0i-'+m0param+' '+'.s1i-'+s1param+' '+s2paramInner).css ({
-    'background-color':'#f7f7f7',
-  })
-}
-if(m0param && s1param && !s2param) {
-  $('.m0i-'+m0param+' '+s1paramInner).css({
-    'background-color':'#f7f7f7',
-  })
-}
-if(m0param && !s1param && !s2param) {
-  $(m0paramInner).css({
-    'background-color':'#f7f7f7',
-  })
+switch(paramCounter) {
+  //This will highlight current selection.
+  case 1:
+    $(m0paramInner).css({
+      'background-color':'#e5e5e5',
+    })
+  break;
+  case 2:
+    $('.m0i-'+m0param+' '+s1paramInner).css({
+      'background-color':'#e5e5e5',
+    })
+  break;
+  case 3:
+    $('.m0i-'+m0param+' '+'.s1i-'+s1param+' '+s2paramInner).css ({
+      'background-color':'#e5e5e5',
+    })
+  break;
+  case 4:
+    $('.m0i-'+m0param+' '+'.s1i-'+s1param+' '+'.s2i-'+s2param+' '+ s3paramInner).css ({
+      'background-color':'#e5e5e5',
+    })
+  break;
+  case 5:
+    $('.m0i-'+m0param+' '+'.s1i-'+s1param+' '+'.s2i-'+s2param+' '+ '.s3i-'+s3param+' '+s4paramInner).css ({
+      'background-color':'#e5e5e5',
+    })
+  default:
+  break;
 }
 
+
+function paramCountFunction(x){
+  if(x){
+    return paramCounter++;
+  } else {
+    return paramCounter;
+  }
+}
 
 function getURLparam(sParam) {
   /*

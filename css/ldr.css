@@ -875,6 +875,7 @@ a.s-icon {
 
 #main {
   padding-bottom: 20px;
+  min-height: 600px;
 }
 #product-main-page {
   width: 100%;

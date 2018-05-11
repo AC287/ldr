@@ -1,16 +1,24 @@
 <?php
+  // PROD-S1.php
   //Product with only sub category2. m0 and s1 are not empty. This will list all s2 inside given s1.
 
   echo "<div class='group-container'>";
   echo "<div class='m-title'>";
-    echo "<a href='".home_url()."/product'>PRODUCT HOME </a> >> <a href='../categories/?m0=".urlencode($cm0)."'>".$cm0."</a> >> ".$cs1;
+    echo "<a href='".home_url()."/product'>PRODUCT HOME </a> >> <a href='../categories/?m0=".urlencode($cm0)."'>".stripslashes($cm0)."</a> >> ".stripslashes($cs1);
   echo "</div>";
 
   $prods2 = $wpdb->get_results("SELECT DISTINCT s2 FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1';");
   // print_r($prods2);
+  $descs1 = $wpdb->get_results("SELECT DISTINCT s1desc FROM wp_prodlegend WHERE m0 = '$cm0' AND s1= '$cs1' AND s1desc IS NOT NULL;");
+  // print_r($descs1);
+  if(!empty($descs1[0]->s1desc)) {
+    echo "<div class='prod-cat-desc'>";
+      echo "<p>".$descs1[0]->s1desc."</p>";
+    echo "</div>";
+  }
+  echo "<div class='s1-box-background'>";
+  echo "<div class='s1-box-flex-container'>";
   if(!empty($prods2[0]->s2)) {
-    echo "<div class='s1-box-background'>";
-    echo "<div class='s1-box-flex-container'>";
     $counter = 0;
     foreach($prods2 as $prods2) {
       $qs2 = addslashes($prods2->s2);
@@ -33,9 +41,25 @@
     for($k=$counter; $k%4!=0; $k++){
       echo "<a class='s1-box s1-box-filler'></a>";
     }
-    echo "</div>";	// end s1-box-flex-container
-    echo "</div>";	// end s1-box-background
+  } else {
+    //s2 is empty. This should display item thumb or item table.
+    if($cm0 != "Rough") {
+      // main category is not rough. Display thumbnail of item here...
+      // echo "Only s1 for this category. This is not rough. need to display thumb here.";
+      $catitems = $wpdb->get_results("SELECT item,img0 FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1';");
+      include 'prod-itemthumb.php';
+    } else {
+      $catlegend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1';");
+
+      $catitems = $wpdb->get_results("SELECT * FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1';");
+      include 'prod-itemtable.php';
+      
+      // echo "Only s1 for this category. This is rough. need to display table here.";
+      // display item table here...
     }
+  }
+  echo "</div>";	// end s1-box-flex-container
+  echo "</div>";	// end s1-box-background
     // $mPos++;
     echo "</div>";  //end group-container div;
 

@@ -48,13 +48,20 @@
 					include 'phpsnippet/prod-s1.php';
 				break;
 				case 3:
-					echo "only m0, s1, and s2 are present";
+					// echo "only m0, s1, and s2 are present";
+					include 'phpsnippet/prod-s2.php';
 				break;
 				case 4:
-					echo "only m0, s1, s2, and s3 are present";
+					// echo "only m0, s1, s2, and s3 are present";
+					include 'phpsnippet/prod-s3.php';
 				break;
 				case 5:
-					echo "every query are present.";
+					// this will be either table or thumbnail display of each item.
+					// echo "every query are present.";
+					include 'phpsnippet/prod-s4.php';
+				break;
+				default:
+					// need default when all query is emptpy........
 				break;
 			}
 

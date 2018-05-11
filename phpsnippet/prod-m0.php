@@ -3,10 +3,17 @@
 
   echo "<div class='group-container'>";
   echo "<div class='m-title'>";
-    echo "<a href='".home_url()."/product'>PRODUCT HOME </a> >> ".$cm0;
+    echo "<a href='".home_url()."/product'>PRODUCT HOME </a> >> ".stripslashes($cm0);
   echo "</div>";
 
   $prods1 = $wpdb->get_results("SELECT DISTINCT s1 FROM wp_prodlegend WHERE m0 = '$cm0';");
+  $descm0 = $wpdb->get_results("SELECT DISTINCT m0desc FROM wp_prodlegend WHERE m0 = '$cm0' AND m0desc IS NOT NULL;");
+  // print_r($descm0);
+  if(!empty($descm0[0]->m0desc)) {
+    echo "<div class='prod-cat-desc'>";
+      echo "<p>".$descm0[0]->m0desc."</p>";
+    echo "</div>";
+  }
   // print_r($prods1);
   if(!empty($prods1[0]->s1)) {
     echo "<div class='s1-box-background'>";

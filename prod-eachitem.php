@@ -41,26 +41,87 @@
 			// echo "<h1> HELLO </h1>";
 			// $mPos = 0;
 			echo "<div class='group-container'>";
-				$get_item_data = $wpdb->get_results("SELECT * FROM wp_prod0 WHERE item='$item_id';");
+				$get_item_data = $wpdb->get_results("SELECT * FROM wp_ldrproddb WHERE item='$item_id';");
 				$get_cert_img = $wpdb->get_results("SELECT * FROM wp_cert;");
+
+				// print_r($get_item_data);
 
 				$item_main_cat = $get_item_data[0]->m0;
 				$item_sub1_cat = $get_item_data[0]->s1;
 				$item_sub2_cat = $get_item_data[0]->s2;
+				$item_sub3_cat = $get_item_data[0]->s3;
+				$item_sub4_cat = $get_item_data[0]->s4;
 
 				$qim0c = addslashes($item_main_cat);
 				$qis1c = addslashes($item_sub1_cat);
 				$qis2c = addslashes($item_sub2_cat);
+				$qis3c = addslashes($item_sub3_cat);
+				$qis4c = addslashes($item_sub4_cat);
 
-				if($item_sub2_cat != ""){
-					$get_item_legend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0='$qim0c' AND s1='$qis1c' AND s2='$qis2c';");
-					echo "<div class='m-title'><a href='".home_url()."/products'>PRODUCT HOME</a> >> <a href='../pm0/?m0=".urlencode($item_main_cat)."'>".$item_main_cat."</a>  >>  <a href='../ps1/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."'>".$item_sub1_cat."</a>  >>  <a href='../ps2/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."&s2=".urlencode($item_sub2_cat)."'>".$item_sub2_cat."</a>  >>  ".$item_id."</div>";
-					// print_r("sub2 is not empty");
-				} else {
-					$get_item_legend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0='$qim0c' AND s1='$qis1c';");
-					echo "<div class='m-title'><a href='../pm0/?m0=".urlencode($item_main_cat)."'>".$item_main_cat."</a>  >>  <a href='../ps2/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."'>".$item_sub1_cat."</a>  >>  ".$item_id."</div>";	//Title
-					// print_r("sub2 is empty");
+				$totalquery = 0;
+				(!empty($qim0c)?$totalquery++:$totalquery);
+				(!empty($qis1c)?$totalquery++:$totalquery);
+				(!empty($qis2c)?$totalquery++:$totalquery);
+				(!empty($qis3c)?$totalquery++:$totalquery);
+				(!empty($qis4c)?$totalquery++:$totalquery);
+
+				echo "<div class='m-title'><a href='".home_url()."/products'>PRODUCT HOME</a> >> ";
+					switch($totalquery) {
+						case 1:
+							$get_item_legend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0='$qim0c';");
+							main0cat($item_main_cat);
+						break;
+						case 2:
+							$get_item_legend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0='$qim0c' AND s1='$qis1c';");
+							s1cat($item_main_cat,$item_sub1_cat);
+						break;
+						case 3:
+							$get_item_legend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0='$qim0c' AND s1='$qis1c' AND s2='$qis2c';");
+							s2cat($item_main_cat,$item_sub1_cat,$item_sub2_cat);
+						break;
+						case 4:
+							$get_item_legend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0='$qim0c' AND s1='$qis1c' AND s2='$qis2c' AND s3='$qis3c';");
+							s3cat($item_main_cat,$item_sub1_cat,$item_sub2_cat,$item_sub3_cat);
+						break;
+						case 5:
+							$get_item_legend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0='$qim0c' AND s1='$qis1c' AND s2='$qis2c' AND s3='$qis3c' AND s4='$qis4c';");
+							s4cat($item_main_cat,$item_sub1_cat,$item_sub2_cat,$item_sub3_cat,$item_sub4_cat);
+						break;
+						default:
+						break;
+					}
+					echo $item_id;
+				echo "</div>";	// end m-title div.
+
+				function main0cat($item_main_cat) {
+					echo "<a href='../categories/?m0=".urlencode($item_main_cat)."'>".$item_main_cat."</a> >> ";
 				}
+				function s1cat($item_main_cat,$item_sub1_cat) {
+					main0cat($item_main_cat);
+					echo "<a href='../categories/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."'>".$item_sub1_cat."</a> >> ";
+				}
+				function s2cat($item_main_cat,$item_sub1_cat,$item_sub2_cat) {
+					s1cat($item_main_cat, $item_sub1_cat);
+					echo "<a href='../categories/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."&s2=".urlencode($item_sub2_cat)."'>".$item_sub2_cat."</a> >> ";
+				}
+				function s3cat($item_main_cat,$item_sub1_cat,$item_sub2_cat,$item_sub3_cat) {
+					s2cat($item_main_cat,$item_sub1_cat,$item_sub2_cat);
+					echo "<a href='../categories/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."&s2=".urlencode($item_sub2_cat)."&s3=".urlencode($item_sub3_cat)."'>".$item_sub3_cat."</a> >> ";
+				}
+				function s4cat($item_main_cat,$item_sub1_cat,$item_sub2_cat,$item_sub3_cat,$item_sub4_cat) {
+					s3cat($item_main_cat,$item_sub1_cat,$item_sub2_cat,$item_sub3_cat);
+					echo "<a href='../categories/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."&s2=".urlencode($item_sub2_cat)."&s3=".urlencode($item_sub3_cat)."&s4=".urlencode($item_sub4_cat)."'>".$item_sub4_cat."</a> >> ";
+				}
+
+				// if($item_sub2_cat != ""){
+				// 	$get_item_legend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0='$qim0c' AND s1='$qis1c' AND s2='$qis2c';");
+				// 	echo "<div class='m-title'><a href='".home_url()."/products'>PRODUCT HOME</a> >> <a href='../pm0/?m0=".urlencode($item_main_cat)."'>".$item_main_cat."</a>  >>  <a href='../ps1/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."'>".$item_sub1_cat."</a>  >>  <a href='../ps2/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."&s2=".urlencode($item_sub2_cat)."'>".$item_sub2_cat."</a>  >>  ".$item_id."</div>";
+				// 	// print_r("sub2 is not empty");
+				// } else {
+				// 	$get_item_legend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0='$qim0c' AND s1='$qis1c';");
+				// 	echo "<div class='m-title'><a href='../pm0/?m0=".urlencode($item_main_cat)."'>".$item_main_cat."</a>  >>  <a href='../ps2/?m0=".urlencode($item_main_cat)."&s1=".urlencode($item_sub1_cat)."'>".$item_sub1_cat."</a>  >>  ".$item_id."</div>";	//Title
+				// 	// print_r("sub2 is empty");
+				// }
 				echo "<div class='s1-box-background'>";
 
 					echo "<div id='each-img-data-container'>";
@@ -134,9 +195,9 @@
 						echo "<div class='each-item-data'>";
 							echo "<div class='item-spec-container'>";
 								echo "<div class='ip-title'>".$get_item_data[0]->item."</div>";
-								echo "<div class='ip-type'>".$get_item_data[0]->s1." ".$get_item_data[0]->s2." ".$get_item_data[0]->m0."</div>";
+								// echo "<div class='ip-type'>".$get_item_data[0]->s1." ".$get_item_data[0]->s2." ".$get_item_data[0]->m0."</div>";
 								echo "<table class='ip-each-data-table'>";
-								for ($x=1; $x <=8; $x++) {
+								for ($x=1; $x <=12; $x++) {
 									$d = "d".$x;
 									echo "<tr class='ip-each-data'>";
 									if ($get_item_data[0]->$d !=""){
@@ -186,6 +247,10 @@
 					echo "</div>";	// end ip-certification
 					echo "<div class='ip-description'>";
 						echo "<div class='ip-desctitle'>PRODUCT DESCRIPTION</div>";
+						echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s1desc."</p>";
+						echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s2desc."</p>";
+						echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s3desc."</p>";
+						echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s4desc."</p>";
 						echo "<p class='ip-detaildescription'>".$get_item_data[0]->d0."</p>";
 					echo "</div>";	// end ip-description;
 				echo "</div>";	// end s1-box-background div;

@@ -29,7 +29,7 @@
           echo "<title>LDR | ".$metatitleDB[0]->title."</title>";
         break;
 
-        case (in_array('pm0', $curLocationArr) || in_array('ps1',$curLocationArr) || in_array('ps2',$curLocationArr)):
+        case (in_array('categories', $curLocationArr)):
           $m0 = $wp_query->query_vars['m0'];
           echo "<title>LDR | ".$m0."</title>";
         break;

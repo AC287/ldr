@@ -44,7 +44,7 @@
                     echo "<div class='custpanel s3i-$s3class'>";
                     foreach($s4_category as $each_s4) {
                       $s4class = $each_s4->s4;
-                      $s4class = preg_replace("/[^a-zA-Z0-9]/","",$s3class);
+                      $s4class = preg_replace("/[^a-zA-Z0-9]/","",$s4class);
                       echo "<div class='custaccordion no-sub s4-$s4class'><a href='".home_url()."/products/categories/?m0=".urlencode($each_mc->m0)."&s1=".urlencode($each_s1->s1)."&s2=".urlencode($each_s2->s2)."&s3=".urlencode($each_s3->s3)."&s4=".urlencode($each_s4->s4)."'>".$each_s4->s4."</a></div>";
                     }
                     echo "</div>";  // end panel

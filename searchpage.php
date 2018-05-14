@@ -1,4 +1,4 @@
-<!--  Template Name: Search Page  -->
+<!--  Template Name: LDR Search Page  -->
 
 <?php get_header();?>
 <div class="container">
@@ -19,14 +19,15 @@
           // echo $searchValue;
           global $wp_query, $wpdb;
           //help link: https://wordpress.stackexchange.com/questions/53194/wordpress-paginate-wpdb-get-results
-
+          #Need to add keyword LIKE search in below $prodquery.
           $prodquery = "
-          (SELECT * FROM wp_prod0 WHERE
+          SELECT * FROM wp_ldrproddb WHERE
           item LIKE '%$searchValue%'
           OR m0 LIKE '%$searchValue%'
           OR s1 LIKE '%$searchValue%'
           OR s2 LIKE '%$searchValue%'
-          OR keyword  LIKE '%$searchValue%'
+          OR s3 LIKE '%$searchValue%'
+          OR s4 LIKE '%$searchValue%'
           OR d1 LIKE '%$searchValue%'
           OR d2 LIKE '%$searchValue%'
           OR d3 LIKE '%$searchValue%'
@@ -36,7 +37,10 @@
           OR d7 LIKE '%$searchValue%'
           OR d8 LIKE '%$searchValue%'
           OR d9 LIKE '%$searchValue%'
-          )";
+          OR d10 LIKE '%$searchValue%'
+          OR d11 LIKE '%$searchValue%'
+          OR d12 LIKE '%$searchValue%'
+          ";
           $total = $wpdb -> get_var("SELECT COUNT(1) FROM (${prodquery}) AS combined_table");
           // echo "$total";
           // $total_query = "SELECT COUNT(*) FROM wp_prod0";
@@ -46,7 +50,9 @@
 
           $offset = ($page * $items_per_page) - $items_per_page;
           $prodSearch = $wpdb->get_results($prodquery . "LIMIT ${offset}, ${items_per_page}");
-
+          // $prodSearch = $wpdb->get_results($prodquery);
+          // print_r($prodquery);
+          // print_r($prodSearch);
           echo "<div class='ps-result-header'>";
           echo "<div class='ps-topinfo'>";
             echo "<div class='ps-search-results'>";
@@ -94,11 +100,36 @@
                 echo "</div>";
                 echo "<div class='sec-items'>";
                   echo "<div class='seci-title'>";
-                    if($exactProd->s2!=''){
-                      echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."'>".$exactProd->item."&nbsp;|&nbsp;".$exactProd->s2."&nbsp;".$exactProd->m0."</a>";
-                    } else {
-                      echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."'>".$exactProd->item."&nbsp;|&nbsp;".$exactProd->s1."&nbsp;".$exactProd->m0."</a>";
-                    }
+                    // if($exactProd->s2!=''){
+                    //   echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."'>".$exactProd->item."&nbsp;|&nbsp;".$exactProd->s2."&nbsp;".$exactProd->m0."</a>";
+                    // } else {
+                    //   echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."'>".$exactProd->item."&nbsp;|&nbsp;".$exactProd->s1."&nbsp;".$exactProd->m0."</a>";
+                    // }
+                    echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."'>".$exactProd->item."</a>";
+                      echo "<p>";
+                      echo $exactProd->m0." > ";
+                      if($exactProd->s1){
+                        echo $exactProd->s1;
+                        if(!empty($exactProd->s2)){
+                          echo " > ";
+                        }
+                      }
+                      if($exactProd->s2){
+                        echo $exactProd->s2;
+                        if(!empty($exactProd->s3)){
+                          echo " > ";
+                        }
+                      }
+                      if($exactProd->s3){
+                        echo $exactProd->s3;
+                        if(!empty($exactProd->s4)){
+                          echo " > ";
+                        }
+                      }
+                      if($exactProd->s4){
+                        echo $exactProd->s4;
+                      }
+                    echo "</p>";
                   echo "</div>";  // end seci-title
                   echo "<div class='seci-spec'>";
                     $m0 = addslashes($exactProd->m0);

@@ -217,6 +217,7 @@
 								}
 								echo "</table>";
 								echo "<br/>";
+								#need to change spec column: d9.
 								echo "<a class='spec-sheet' href='".$get_item_data[0]->d9."'>SPEC SHEET</a>";
 
 							echo "</div>";	// end item-spec-container div;

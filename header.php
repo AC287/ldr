@@ -220,7 +220,7 @@
               </div>
             </div>
             <div class="nav2-search">
-              <form action='<?php echo home_url();?>/search' method='get' autocomplete="off">
+              <form action='<?php echo home_url();?>/products/search' method='get' autocomplete="off">
                 <span class="glyphicon glyphicon-search nav2-search-icon"></span>
                 <span class="nav2-search-txt">PRODUCT SEARCH</span>
                 <input name="isearch" type="text" class="search-field" placeholder="KEYWORD / PHRASE / PART#" required></input>

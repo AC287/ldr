@@ -53,7 +53,7 @@
 
       $catitems = $wpdb->get_results("SELECT * FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1';");
       include 'prod-itemtable.php';
-      
+
       // echo "Only s1 for this category. This is rough. need to display table here.";
       // display item table here...
     }

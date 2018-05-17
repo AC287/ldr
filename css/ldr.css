@@ -803,7 +803,7 @@ a.s-icon {
 
 .custaccordion {
   font-family: 'Questrial', sans-serif;
-  cursor: pointer;
+  position: relative;
   width: 100%;
   /* width: inherit; */
   display: block;
@@ -811,8 +811,14 @@ a.s-icon {
   text-align: left;
   padding-top: 1.5px;
   padding-bottom: 1.5px;
-  padding-left: 10px;
+  padding-left: 5px;
   padding-right: 5px;
+}
+.custaccordion img {
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  cursor: pointer;
 }
 .custpanel {
   /*width: 100%;*/
@@ -830,14 +836,16 @@ a.s-icon {
 }*/
 .no-sub {
   width: inherit;
-  margin-left: 15px;
+  /* margin-left: 15px; */
   /*margin-right: 10px;*/
 }
 .custaccordion a {
   display: inline-block;
   text-decoration: none;
+  margin-left: 15px;
   /* color: #000; */
-  width: 100%;
+  /* width: 100%; */
+  word-wrap: break-word;
 }
 .chev {
   width: 12px;
@@ -921,6 +929,10 @@ a.s-icon {
 
 .productaccordion-mobilemenu {
   display: none;
+}
+
+.productaccordion-content-container {
+  padding-left: 10px;
 }
 
 @media screen and (max-width: 800px){
@@ -1147,7 +1159,7 @@ img.p2-cert-img {
 }
 .item-data-sheet {
   width: 100%;
-  font-size: 12px;
+  /* font-size: 12px; */
   text-align: center;
   /*padding: 5px;*/
   /*margin: auto;*/
@@ -1155,14 +1167,25 @@ img.p2-cert-img {
 .item-data-sheet th {
   /*width: 100%;*/
   font-family: 'bignoodletitlingregular';
-  padding-top: 5px;
+  padding: 8px 5px 0px 5px;
+  height: 30pt;
   font-size: 16pt;
+  line-height: 16pt;
   text-align: center;
   background-color: #000;
   color: #fff;
 }
 .item-data-sheet td {
   font-family: 'Questrial', sans-serif;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+td.prod-itemnum {
+  font-size: 10pt;
+  white-space: nowrap;
+}
+td.prod-data {
+  font-size: 9pt;
 }
 .item-data-sheet tr {
   border-bottom: 1px solid #A7A9AC;
@@ -1190,7 +1213,13 @@ img.p2-cert-img {
   }
   .item-data-sheet th {
     font-size: 12pt;
-    line-height: 13pt;
+    line-height: 12pt;
+  }
+  td.prod-itemnum {
+    font-size: 8pt;
+  }
+  td.prod-data {
+    font-size: 6pt;
   }
 }
 /* - - - preview thumbnail image in ps2 - - - */

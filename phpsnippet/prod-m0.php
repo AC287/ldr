@@ -20,10 +20,23 @@
     echo "<div class='s1-box-flex-container'>";
     $counter = 0;
     foreach($prods1 as $prods1) {
-      $qs1 = addslashes($prods1->s1);
+      $qs1 = addslashes($prods1->s1); // in case if data contains special character. need slash for query.
       $img = $wpdb->get_results("SELECT DISTINCT cat1img FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$qs1' AND cat1img IS NOT NULL;");
       // print_r(sizeof($img));
-      echo "<a href='../categories/?m0=".urlencode($cm0)."&s1=".urlencode($prods1->s1)."' class='s1-box'>";
+
+      $s2_check = $wpdb->get_var("SELECT COUNT(DISTINCT s2) FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$qs1';");
+
+      if(!$s2_check) {
+        $item_check = $wpdb->get_results("SELECT item FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$qs1';");
+      }
+
+      if(count($item_check)==1){
+        echo "<a href='../item/?id=".urlencode($item_check[0]->item)."&m0=".urlencode($cm0)."&s1=".urlencode($prods1->s1)."' class='s1-box'>";
+      } else {
+        // code...
+        echo "<a href='../categories/?m0=".urlencode($cm0)."&s1=".urlencode($prods1->s1)."' class='s1-box'>";
+      }
+
       echo "<div class='item-img'>";
       if ($img[0]->cat1img=='' || $img[0]->cat1img==' ' ) {
         echo "<img src='http://files.coda.com.s3.amazonaws.com/imgv2/comingsoon.jpg'>";

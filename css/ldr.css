@@ -1372,8 +1372,8 @@ a.spec-sheet {
   text-decoration: underline;
   cursor: auto;
 }
-.ip-certification {
-  padding: 10px;
+.ip-certification, .ip-description {
+  padding: 10px 40px 10px 40px;
 }
 .ip-certitle, .ip-desctitle {
   font-family: 'bignoodletitlingregular';
@@ -1381,9 +1381,7 @@ a.spec-sheet {
   font-size: 30px;
   font-weight: bold;
 }
-.ip-description {
-  padding: 10px;
-}
+
 /*.ip-desctitle {
   font-weight: bold;
 }*/

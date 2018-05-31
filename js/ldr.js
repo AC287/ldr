@@ -114,7 +114,7 @@ var s4param = getURLparam('s4');
 paramCountFunction(s4param);
 
 // console.log(s2param);
-console.log(paramCounter);
+// console.log(paramCounter);
 
 var m0paramInner = '.m0-'+m0param;
 var s1paramInner = '.s1-'+s1param;
@@ -206,18 +206,80 @@ function getURLparam(sParam) {
     source: http://www.jquerybyexample.net/2012/06/get-url-parameters-using-jquery.html
     source: https://stackoverflow.com/questions/3431512/javascript-equivalent-to-phps-urldecode
   */
-  var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-      sURLVariables = sPageURL.split('&'),
-      sParameterName,
-      i;
+  // console.log(sParam);
 
-  for (i = 0; i < sURLVariables.length; i++) {
-      sParameterName = sURLVariables[i].split('=');
+  var sPageURL = decodeURIComponent(window.location.search.substring(1));
+  // console.log(sPageURL.search("&s1="));
+  var m0, s1, s2, s3, s4;
 
-      if (sParameterName[0] === sParam) {
-          return (sParameterName[1] === undefined ? true : sParameterName[1]).replace(/[^a-zA-Z0-9]/g, '');;
-      }
+  if(sPageURL) {
+
+    switch (sParam) {
+      case "m0":
+        //This is for m0. s1 exist in url param.
+        //Split s1, take array position 0, split array position 0 from m0 and take array position 1.
+        //Then regex replace special character and return value.
+        //If none exist, return 0.
+        if(sPageURL.search("&s1=") > -1) {
+          m0 = sPageURL.split("&s1=")[0].split("m0=")[1].replace(/[^a-zA-Z0-9]/g, '');
+          return m0;
+        } else if (sPageURL.search("m0=") > -1) {
+          m0 = sPageURL.split("m0=")[1].replace(/[^a-zA-Z0-9]/g, '');
+          return m0;
+        } else {
+          return;
+        }
+      break;
+      case "s1":
+        if(sPageURL.search("&s2=") > -1) {
+          s1 = sPageURL.split("&s2=")[0].split("&s1=")[1].replace(/[^a-zA-Z0-9]/g, '');
+          return s1;
+        } else if (sPageURL.search("&s1=") > -1){
+          s1 = sPageURL.split("s1=")[1].replace(/[^a-zA-Z0-9]/g, '');
+          return s1;
+        } else {
+          return;
+        }
+      break;
+      case "s2":
+        if(sPageURL.search("&s3=") > -1) {
+          s2 = sPageURL.split("&s3=")[0].split("&s2=")[1].replace(/[^a-zA-Z0-9]/g, '');
+          return s2;
+        } else if(sPageURL.search("&s2=") > -1){
+          s2 = sPageURL.split("s2=")[1].replace(/[^a-zA-Z0-9]/g, '');
+          return s2;
+        } else {
+          return;
+        }
+      break;
+      case "s3":
+        if(sPageURL.search("&s4=") > -1) {
+          s3 = sPageURL.split("&s4=")[0].split("&s3=")[1].replace(/[^a-zA-Z0-9]/g, '');
+          return s3;
+        } else if(sPageURL.search("&s3=") > -1){
+          s3 = sPageURL.split("&s3=")[1].replace(/[^a-zA-Z0-9]/g, '');
+          return s3;
+        } else {
+          return;
+        }
+      break;
+      case "s4":
+        if(sPageURL.search("&s4=") > -1) {
+          s4 = sPageURL.split("&s4=")[1].replace(/[^a-zA-Z0-9]/g, '');
+          return s4;
+        } else {
+          return;
+        }
+      break;
+      default:
+      break;
+    }
+
+  } else {
+    return;
   }
+
+
 }
 
 

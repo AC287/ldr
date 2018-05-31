@@ -21,18 +21,18 @@
     echo "</div>";
   }
 
+  echo "<div class='s1-box-background'>";
+  echo "<div class='s1-box-flex-container'>";
   if(stripslashes($cm0)!="Rough") {
     $catitems = $wpdb->get_results("SELECT item,img0 FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$cs4';");
 
-    echo "<div class='s1-box-background'>";
-    echo "<div class='s1-box-flex-container'>";
+
 
     // print_r($catitems);
 
       include 'prod-itemthumb.php';
 
-    echo "</div>";	// end s1-box-flex-container
-    echo "</div>";	// end s1-box-background
+
     // $mPos++;
     echo "</div>";  //end group-container div;
 
@@ -44,6 +44,8 @@
     include 'prod-itemtable.php';
     // echo "THIS IS ROUGH. IT NEEDS GRAPH";
   }
+  echo "</div>";	// end s1-box-flex-container
+  echo "</div>";	// end s1-box-background
 
 
 

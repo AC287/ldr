@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 
 <div class='prod-tocatalogs'>
-	<a href='<?php echo home_url();?>/catalogs/'>Click here to view our catalogs.</a>
+	<a href='<?php echo home_url();?>/products/catalogs/'>Click here to view our catalogs.</a>
 	<div class='prod-tocatalogs-underline'>
 	</div>
 </div>
@@ -29,6 +29,11 @@
 			(!empty($cs2)?$totalquery++:$totalquery);
 			(!empty($cs3)?$totalquery++:$totalquery);
 			(!empty($cs4)?$totalquery++:$totalquery);
+
+			//Special character retrieved from query_vars from URL parameter will include slash next to it.
+			//That slash is required when querying exact value from DB.
+			//If displaying inside html, use stripslashes();
+			//if querying phrase that involve special character, use addslashes();
 
 			echo "<div id='product-main-page'>";
 			echo "<div class='cat-bar'>";	// This is accordion section.

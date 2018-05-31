@@ -105,7 +105,7 @@
                     // } else {
                     //   echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."'>".$exactProd->item."&nbsp;|&nbsp;".$exactProd->s1."&nbsp;".$exactProd->m0."</a>";
                     // }
-                    echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."'>".$exactProd->item."</a>";
+                    echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."&m0=".urlencode($exactProd->m0)."&s1=".urlencode($exactProd->s1)."&s2=".urlencode($exactProd->s2)."&s3=".urlencode($exactProd->s3)."&s4=".urlencode($exactProd->s4)."'>".$exactProd->item."</a>";
                       echo "<p>";
                       echo $exactProd->m0." > ";
                       if($exactProd->s1){

@@ -5,7 +5,7 @@
 <?php get_header(); ?>
 
 <div class='prod-tocatalogs'>
-	<a href='<?php echo home_url();?>/catalogs/'>Click here to view our catalogs.</a>
+	<a href='<?php echo home_url();?>/products/catalogs/'>Click here to view our catalogs.</a>
 	<div class='prod-tocatalogs-underline'>
 	</div>
 </div>

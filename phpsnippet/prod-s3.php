@@ -23,10 +23,17 @@
     $counter = 0;
     foreach($prods4 as $prods4) {
       $qs4 = addslashes($prods4->s4);
-      $img = $wpdb->get_results("SELECT DISTINCT cat4img FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$cs4' AND cat4img IS NOT NULL;");
+      $img = $wpdb->get_results("SELECT DISTINCT cat4img FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$qs4' AND cat4img IS NOT NULL;");
       // print_r(sizeof($img));
       // print_r($img);
-      echo "<a href='../categories/?m0=".urlencode($cm0)."&s1=".urlencode($cs1)."&s2=".urlencode($cs2)."&s3=".urlencode($cs3)."&s4=".urlencode($prods4->s4)."' class='s1-box'>";
+      $item_check = $wpdb->get_results("SELECT DISTINCT item FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$qs4';");
+
+      if(count($item_check)==1) {
+        echo "<a href='../item/?id=".urlencode($item_check[0]->item)."&m0=".urlencode($cm0)."&s1=".urlencode($cs1)."&s2=".urlencode($cs2)."&s3=".urlencode($cs3)."&s4=".urlencode($prods4->s4)."' class='s1-box'>";
+      } else {
+        echo "<a href='../categories/?m0=".urlencode($cm0)."&s1=".urlencode($cs1)."&s2=".urlencode($cs2)."&s3=".urlencode($cs3)."&s4=".urlencode($prods4->s4)."' class='s1-box'>";
+      }
+
       echo "<div class='item-img'>";
       if ($img[0]->cat4img==' ' || $img[0]->cat4img=='') {
         echo "<img src='http://files.coda.com.s3.amazonaws.com/imgv2/comingsoon.jpg'>";

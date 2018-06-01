@@ -24,6 +24,7 @@
       $qs2 = addslashes($prods2->s2);
       $img = $wpdb->get_results("SELECT DISTINCT cat2img FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$qs2' AND cat2img IS NOT NULL;");
 
+      /*
       $s3_check = $wpdb->get_var("SELECT COUNT(DISTINCT s3) FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$qs2';");
 
       if(!$s3_check) {
@@ -37,6 +38,10 @@
       } else {
         echo "<a href='../categories/?m0=".urlencode($cm0)."&s1=".urlencode($cs1)."&s2=".urlencode($prods2->s2)."' class='s1-box'>";
       }
+      */
+
+      echo "<a href='../categories/?m0=".urlencode($cm0)."&s1=".urlencode($cs1)."&s2=".urlencode($prods2->s2)."' class='s1-box'>";
+
 
       // print_r(sizeof($img));
       // print_r($img);

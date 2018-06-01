@@ -24,10 +24,13 @@
       $img = $wpdb->get_results("SELECT DISTINCT cat1img FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$qs1' AND cat1img IS NOT NULL;");
       // print_r(sizeof($img));
 
+      /*
       $s2_check = $wpdb->get_var("SELECT COUNT(DISTINCT s2) FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$qs1';");
 
       if(!$s2_check) {
         $item_check = $wpdb->get_results("SELECT item FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$qs1';");
+      } else {
+        $item_check = null;
       }
 
       if(count($item_check)==1){
@@ -36,6 +39,10 @@
         // code...
         echo "<a href='../categories/?m0=".urlencode($cm0)."&s1=".urlencode($prods1->s1)."' class='s1-box'>";
       }
+      */
+
+      echo "<a href='../categories/?m0=".urlencode($cm0)."&s1=".urlencode($prods1->s1)."' class='s1-box'>";
+
 
       echo "<div class='item-img'>";
       if ($img[0]->cat1img=='' || $img[0]->cat1img==' ' ) {

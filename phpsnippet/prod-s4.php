@@ -12,32 +12,42 @@
 
   // $prods4 = $wpdb->get_results("SELECT DISTINCT s4 FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3';");
   // print_r($prods4);
-  $descs4 = $wpdb->get_results("SELECT DISTINCT s4desc FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$cs4' AND s4desc IS NOT NULL;");
-  // print_r($descs2);
+  $descs4 = $wpdb->get_results("SELECT s2desc,s3desc,s4desc FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$cs4';");
+  // print_r($descs4);
 
-  if(!empty($descs4[0]->s4desc)) {
-    echo "<div class='prod-cat-desc'>";
-      echo "<p>".$descs4[0]->s4desc."</p>";
-    echo "</div>";
-  }
+  echo "<div class='prod-cat-desc'>";
+    // echo "<p>".$descs4[0]->s1desc."</p>";
+    echo "<p>".$descs4[0]->s2desc."</p>";
+    echo "<p>".$descs4[0]->s3desc."</p>";
+    echo "<p>".$descs4[0]->s4desc."</p>";
+  echo "</div>";
+
+  // if(!empty($descs4[0]->s4desc)) {
+  //   echo "<div class='prod-cat-desc'>";
+  //     echo "<p>".$descs4[0]->s1desc."</p>";
+  //     echo "<p>".$descs4[0]->s2desc."</p>";
+  //     echo "<p>".$descs4[0]->s3desc."</p>";
+  //     echo "<p>".$descs4[0]->s4desc."</p>";
+  //   echo "</div>";
+  // }
 
   echo "<div class='s1-box-background'>";
   echo "<div class='s1-box-flex-container'>";
+
+  $catlegend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$cs4';");
+
   if(stripslashes($cm0)!="Rough") {
+
     $catitems = $wpdb->get_results("SELECT item,img0 FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$cs4';");
-
-
 
     // print_r($catitems);
 
       include 'prod-itemthumb.php';
 
-
     // $mPos++;
     echo "</div>";  //end group-container div;
 
   } else {
-    $catlegend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$cs4';");
 
     $catitems = $wpdb->get_results("SELECT * FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s4 = '$cs4';");
 

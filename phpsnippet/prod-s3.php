@@ -10,13 +10,18 @@
 
   $prods4 = $wpdb->get_results("SELECT DISTINCT s4 FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3';");
   // print_r($prods4);
-  $descs3 = $wpdb->get_results("SELECT DISTINCT s3desc FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3' AND s3desc IS NOT NULL;");
-  // print_r($descs2);
-  if(!empty($descs3[0]->s3desc)) {
-    echo "<div class='prod-cat-desc'>";
-      echo "<p>".$descs3[0]->s3desc."</p>";
-    echo "</div>";
-  }
+  $descs3 = $wpdb->get_results("SELECT s2desc,s3desc FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3';");
+  // print_r($descs3);
+  echo "<div class='prod-cat-desc'>";
+    // echo "<p>".$descs3[0]->s1desc."</p>";
+    echo "<p>".$descs3[0]->s2desc."</p>";
+    echo "<p>".$descs3[0]->s3desc."</p>";
+  echo "</div>";
+  // if(!empty($descs3[0]->s3desc)) {
+  //   echo "<div class='prod-cat-desc'>";
+  //     echo "<p>".$descs3[0]->s3desc."</p>";
+  //   echo "</div>";
+  // }
   echo "<div class='s1-box-background'>";
   echo "<div class='s1-box-flex-container'>";
   if(!empty($prods4[0]->s4)) {
@@ -57,13 +62,15 @@
     }
     else {
       //s2 is empty. This should display item thumb or item table.
+
+      $catlegend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3';");
+
       if($cm0 != "Rough") {
         // main category is not rough. Display thumbnail of item here...
         // echo "Only s3 for this category. This is not rough. need to display thumb here.";
-        $catitems = $wpdb->get_results("SELECT item, img0 FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3';");
+        $catitems = $wpdb->get_results("SELECT item,img0 FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3';");
         include 'prod-itemthumb.php';
       } else {
-        $catlegend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3';");
 
         $catitems = $wpdb->get_results("SELECT * FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$cs3';");
         include 'prod-itemtable.php';

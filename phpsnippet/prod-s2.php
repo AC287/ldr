@@ -29,6 +29,8 @@
 
       if(!$s4_check) {
         $item_check = $wpdb->get_results("SELECT DISTINCT item FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1' AND s2 = '$cs2' AND s3 = '$qs3';");
+      } else {
+        $item_check = null;
       }
 
       if(count($item_check)==1){

@@ -28,6 +28,8 @@
 
       if(!$s2_check) {
         $item_check = $wpdb->get_results("SELECT item FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$qs1';");
+      } else {
+        $item_check = null;
       }
 
       if(count($item_check)==1){

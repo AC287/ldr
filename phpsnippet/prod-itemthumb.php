@@ -1,6 +1,18 @@
 <?php
   // This is non Rough item thumbnail page.
   // echo "snippet triggered.";
+
+  echo "<div class='prod-desclist-container'>";
+    echo "<ul>";
+    for ($l=0; $l<10; $l++) {
+      $list_data = "l".$l;
+      if($catlegend[0]->$list_data!=null && $catlegend[0]->$list_data!=' '){
+        echo "<li>".$catlegend[0]->$list_data."</li>";
+      }
+    }
+    echo "</ul>";
+  echo "</div>";
+  
   $counter = 0;
   // print_r($catitems);
   foreach($catitems as $eachitem) {

@@ -248,11 +248,19 @@
 					echo "</div>";	// end ip-certification
 					echo "<div class='ip-description'>";
 						echo "<div class='ip-desctitle'>PRODUCT DESCRIPTION</div>";
-						echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s1desc."</p>";
+						// echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s1desc."</p>";
 						echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s2desc."</p>";
 						echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s3desc."</p>";
 						echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s4desc."</p>";
 						echo "<p class='ip-detaildescription'>".$get_item_data[0]->d0."</p>";
+						echo "<ul class='ip-legendlist'>";
+						for ($l=0; $l<10; $l++) {
+							$list_data = "l".$l;
+							if($get_item_legend[0]->$list_data!=null && $get_item_legend[0]->$list_data!=' '){
+								echo "<li>".$get_item_legend[0]->$list_data."</li>";
+							}
+						}
+						echo "</ul>";
 					echo "</div>";	// end ip-description;
 				echo "</div>";	// end s1-box-background div;
 				// $mPos++;

@@ -9,13 +9,18 @@
 
   $prods2 = $wpdb->get_results("SELECT DISTINCT s2 FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1';");
   // print_r($prods2);
-  $descs1 = $wpdb->get_results("SELECT DISTINCT s1desc FROM wp_prodlegend WHERE m0 = '$cm0' AND s1= '$cs1' AND s1desc IS NOT NULL;");
+  
+  // $descs1 = $wpdb->get_results("SELECT s1desc FROM wp_prodlegend WHERE m0 = '$cm0' AND s1= '$cs1';");
   // print_r($descs1);
-  if(!empty($descs1[0]->s1desc)) {
-    echo "<div class='prod-cat-desc'>";
-      echo "<p>".$descs1[0]->s1desc."</p>";
-    echo "</div>";
-  }
+  // echo "<div class='prod-cat-desc'>";
+  //   echo "<p>".$descs1[0]->s1desc."</p>";
+  // echo "</div>";
+
+  // if(!empty($descs1[0]->s1desc)) {
+  //   echo "<div class='prod-cat-desc'>";
+  //     echo "<p>".$descs1[0]->s1desc."</p>";
+  //   echo "</div>";
+  // }
   echo "<div class='s1-box-background'>";
   echo "<div class='s1-box-flex-container'>";
   if(!empty($prods2[0]->s2)) {
@@ -62,13 +67,15 @@
     }
   } else {
     //s2 is empty. This should display item thumb or item table.
+
+    $catlegend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1';");
+
     if($cm0 != "Rough") {
       // main category is not rough. Display thumbnail of item here...
       // echo "Only s1 for this category. This is not rough. need to display thumb here.";
       $catitems = $wpdb->get_results("SELECT item,img0 FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1';");
       include 'prod-itemthumb.php';
     } else {
-      $catlegend = $wpdb->get_results("SELECT * FROM wp_prodlegend WHERE m0 = '$cm0' AND s1 = '$cs1';");
 
       $catitems = $wpdb->get_results("SELECT * FROM wp_ldrproddb WHERE m0 = '$cm0' AND s1 = '$cs1';");
       include 'prod-itemtable.php';

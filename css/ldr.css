@@ -1376,10 +1376,13 @@ td.prod-data {
 .ip-legend, .ip-spec {
   padding: 0px 5px 0px 5px;
 }
+.ip-pdf {
+  padding-bottom: 10px;
+}
 a.spec-sheet {
   color: blue;
   text-decoration: underline;
-  cursor: auto;
+  cursor: pointer;
 }
 .ip-certification, .ip-description {
   padding: 10px 40px 10px 40px;

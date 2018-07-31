@@ -23,6 +23,12 @@
 			// echo 'Sub Category : ' . $wp_query->query_vars['s1'];
 
 			$item_id = $wp_query->query_vars['id'];	//assign query value
+			$item_m0 = $wp_query->query_vars['m0'];
+			$item_s1 = $wp_query->query_vars['s1'];
+			$item_s2 = $wp_query->query_vars['s2'];
+			$item_s3 = $wp_query->query_vars['s3'];
+			$item_s4 = $wp_query->query_vars['s4'];
+
 			// print_r($p2m0);
 			// print_r($p2s1);
 			// print_r($p2s2);
@@ -41,7 +47,7 @@
 			// echo "<h1> HELLO </h1>";
 			// $mPos = 0;
 			echo "<div class='group-container'>";
-				$get_item_data = $wpdb->get_results("SELECT * FROM wp_ldrproddb WHERE item='$item_id';");
+				$get_item_data = $wpdb->get_results("SELECT * FROM wp_ldrproddb WHERE item='$item_id' AND m0 = '$item_m0';");
 				$get_cert_img = $wpdb->get_results("SELECT * FROM wp_cert;");
 
 				// print_r($get_item_data);
@@ -218,7 +224,15 @@
 								echo "</table>";
 								echo "<br/>";
 								#need to change spec column: d9.
-								echo "<a class='spec-sheet' href='".$get_item_data[0]->d9."'>SPEC SHEET</a>";
+								if($get_item_data[0]->spec || $get_item_data[0]->spec!='') {
+									echo "<div class='ip-pdf'><a class='spec-sheet' href='".$get_item_data[0]->spec."' rel='noopener noreferrer' target='_blank'>SPEC SHEET</a></div>";
+								}
+								if($get_item_data[0]->usermanual || $get_item_data[0]->usermanual!='') {
+									echo "<div class='ip-pdf'><a class='spec-sheet' href='".$get_item_data[0]->usermanual."' rel='noopener noreferrer' target='_blank'>USER MANUAL</a></div>";
+								}
+								if($get_item_data[0]->sds || $get_item_data[0]->sds!='') {
+									echo "<div class='ip-pdf'><a class='spec-sheet' href='".$get_item_data[0]->sds."' rel='noopener noreferrer' target='_blank'>SAFETY DATA SHEET</a></div>";
+								}
 
 							echo "</div>";	// end item-spec-container div;
 						echo "</div>";	// end each-item-data;
@@ -227,25 +241,30 @@
 					echo "</div>";	// end each-img-data-container.
 
 
-					echo "<div class='ip-certification'>";
+					if(($get_item_data[0]->cert0)!='' || ($get_item_data[0]->cert0)) {
+						echo "<div class='ip-certification'>";
 						echo "<div class='ip-certitle'>CERTIFIED:</div>";
 						echo "<div >";
-							// print_r(sizeof($get_cert_img));
-							for ($x=0; $x<=9; $x++) {	//this get total list of certified from item db.
-								$cert = "cert".$x;
-								$cert_type = $get_item_data[0]->$cert;
-								// print_r($cert_type);
-								// This data check against certification db one by one and if equal, display image.
-								if($cert_type != ""){
-									for ($y=0; $y < sizeof($get_cert_img); $y++) {
-										if ($get_cert_img[$y]->type == $cert_type){
-											echo "<img class='ip-cert-img' src='".$get_cert_img[$y]->link."'>";
-										}
-									}// end check loop for $get_cert_img;
-								}
+						// print_r(sizeof($get_cert_img));
+						for ($x=0; $x<=9; $x++) {	//this get total list of certified from item db.
+							$cert = "cert".$x;
+							$cert_type = $get_item_data[0]->$cert;
+							// print_r($cert_type);
+							// This data check against certification db one by one and if equal, display image.
+							if($cert_type != ""){
+								for ($y=0; $y < sizeof($get_cert_img); $y++) {
+									if ($get_cert_img[$y]->type == $cert_type){
+										echo "<img class='ip-cert-img' src='".$get_cert_img[$y]->link."'>";
+									}
+								}// end check loop for $get_cert_img;
 							}
+						}
 						echo "</div>";
-					echo "</div>";	// end ip-certification
+						echo "</div>";	// end ip-certification
+					}	// end if selection for certifications
+
+					if(($get_item_legend[0]->s2desc || $get_item_legend[0]->s3desc || $get_item_legend[0]->s4desc)||($get_item_data[0]->d0)!='' || ($get_item_data[0]->d0)) {
+					}
 					echo "<div class='ip-description'>";
 						echo "<div class='ip-desctitle'>PRODUCT DESCRIPTION</div>";
 						// echo "<p class='ip-detaildescription'>".$get_item_legend[0]->s1desc."</p>";

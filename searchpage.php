@@ -82,6 +82,7 @@
             foreach ($prodSearch as $exactProd) {
               echo "<div class='search-each-container'>";
                 echo "<div class='sec-thumb'>";
+                  echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."&m0=".urlencode($exactProd->m0)."&s1=".urlencode($exactProd->s1)."&s2=".urlencode($exactProd->s2)."&s3=".urlencode($exactProd->s3)."&s4=".urlencode($exactProd->s4)."'>";
                   $thumbCounter = 0;
                   for($x=0; $x<=9; $x++) {
                     //This will loop through all 10 image slots and see if there are any images.
@@ -96,7 +97,7 @@
                     //if no images are found, it will default to image placeholder.
                     echo "<img src='http://files.coda.com.s3.amazonaws.com/imgv2/comingsoon.jpg'>";
                   }
-
+                  echo "</a>";
                 echo "</div>";
                 echo "<div class='sec-items'>";
                   echo "<div class='seci-title'>";
@@ -159,7 +160,7 @@
                     echo "<div class='secis-blur'></div>";
                   echo "</div>";  // end seci-spec;
                   echo "<div class='seci-button'>";
-                    echo "<a class='btn btn-secondary' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."' role='button'>View Details</a>";
+                    echo "<a class='btn btn-secondary' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."&m0=".urlencode($exactProd->m0)."&s1=".urlencode($exactProd->s1)."&s2=".urlencode($exactProd->s2)."&s3=".urlencode($exactProd->s3)."&s4=".urlencode($exactProd->s4)."' role='button'>View Details</a>";
                   echo "</div>";
                 echo "</div>";  // end sec-items.
               echo "</div>";  // end search-each-container class.

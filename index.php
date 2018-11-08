@@ -23,18 +23,30 @@
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
-    <!-- <li data-target="#myCarousel" data-slide-to="4"></li> -->
+    <li data-target="#myCarousel" data-slide-to="4"></li>
     <!-- <li data-target="#myCarousel" data-slide-to="5"></li> -->
     <!-- <li data-target="#myCarousel" data-slide-to="3"></li> -->
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
+
     <div class="item active">
+      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_00.jpg">
+      <div class="index-banner-textbox ibt-img1">
+        <div class="ibt-text">
+          <span>REPAIR TO GET YOU OUT OF HOT WATER</span>
+        </div>
+        <div class="ibt-underline">
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
       <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_01.jpg">
       <div class="index-banner-textbox ibt-img1">
         <div class="ibt-text">
-          <span>FASHION NEVER LOOKED SO GOOD</span>
+          <span>WHERE PLUMBING MEETS FASHION</span>
         </div>
         <div class="ibt-underline">
         </div>
@@ -111,21 +123,6 @@
 
       <div class="gc-indexcontainer">
         <div class="gc-indeximages">
-          <img src="<?php bloginfo('template_directory')?>/images/icons/home-faucet.svg">
-        </div>
-        <div class="gc-txtbox">
-          <div class="gc-indextitle">
-            <p>Fashion</p>
-          </div>
-          <div class="gc-indextxt">
-            <p>LDR carries a complete line of high quality fashion plumbing kitchen, bath and laundry products. The product offering covers accessories, organization, and safety.</p>
-            <p>LDR offers both old school nostalgic  items useful when replacing old parts, and cutting edge modern products ready to make any space shine.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="gc-indexcontainer">
-        <div class="gc-indeximages">
           <img src="<?php bloginfo('template_directory')?>/images/icons/home-rough.svg">
         </div>
         <div class="gc-txtbox">
@@ -135,6 +132,21 @@
           <div class="gc-indextxt">
             <p>LDR's rough line is comprised of over 4,000 rough plumbing sku's made from black, galvanized, copper, brass, and plastic.</p>
             <p>With LDR's rail system which includes channel and rail cards, and their slanted cut case box design, the rough products are easy to find even on lower shelves.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="gc-indexcontainer">
+        <div class="gc-indeximages">
+          <img src="<?php bloginfo('template_directory')?>/images/icons/home-faucet.svg">
+        </div>
+        <div class="gc-txtbox">
+          <div class="gc-indextitle">
+            <p>Fashion</p>
+          </div>
+          <div class="gc-indextxt">
+            <p>LDR carries a complete line of high quality fashion plumbing kitchen, bath and laundry products. The product offering covers accessories, organization, and safety.</p>
+            <p>LDR offers both old school nostalgic  items useful when replacing old parts, and cutting edge modern products ready to make any space shine.</p>
           </div>
         </div>
       </div>

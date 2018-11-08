@@ -16,7 +16,7 @@
   endif;
 */?>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -33,7 +33,7 @@
 
     <div class="item active">
       <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_00.jpg">
-      <div class="index-banner-textbox ibt-img1">
+      <div class="index-banner-textbox ibt-img0">
         <div class="ibt-text">
           <span>REPAIR TO GET YOU OUT OF HOT WATER</span>
         </div>
@@ -135,7 +135,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="gc-indexcontainer">
         <div class="gc-indeximages">
           <img src="<?php bloginfo('template_directory')?>/images/icons/home-faucet.svg">

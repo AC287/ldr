@@ -16,7 +16,7 @@
   endif;
 */?>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -32,52 +32,8 @@
   <div class="carousel-inner" role="listbox">
 
     <div class="item active">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_00.jpg">
-      <div class="index-banner-textbox ibt-img0">
-        <div class="ibt-text">
-          <span>REPAIR TO GET YOU OUT OF HOT WATER</span>
-        </div>
-        <div class="ibt-underline">
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_01.jpg">
-      <div class="index-banner-textbox ibt-img1">
-        <div class="ibt-text">
-          <span>WHERE PLUMBING MEETS FASHION</span>
-        </div>
-        <div class="ibt-underline">
-        </div>
-      </div>
-    </div>
-
-    <!-- <div class="item">
-      <img src="<?php //bloginfo('template_directory')?>/images/banners/ldr_02.jpg">
-      <div class="index-banner-textbox ibt-img2">
-        <div class="ibt-text">
-          <span>PLUMBING FROM A TO Z</span>
-        </div>
-        <div class="ibt-underline">
-        </div>
-      </div>
-    </div> -->
-
-    <div class="item">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_03.jpg">
-      <div class="index-banner-textbox ibt-img3">
-        <div class="ibt-text">
-          <span>BEST IN CLASS MERCHANDISING</span>
-        </div>
-        <div class="ibt-underline">
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_05.jpg">
-      <div class="index-banner-textbox ibt-img5">
+      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_rough.jpg">
+      <div class="index-banner-textbox ibt-rough">
         <div class="ibt-text">
           <span>NOT ROUGH AROUND THE EDGES</span>
         </div>
@@ -87,8 +43,41 @@
     </div>
 
     <div class="item">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_04.jpg">
-      <div class="index-banner-textbox ibt-img4">
+      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_merch.jpg">
+      <div class="index-banner-textbox ibt-merch">
+        <div class="ibt-text">
+          <span>BEST IN CLASS MERCHANDISING</span>
+        </div>
+        <div class="ibt-underline">
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_fashion.jpg">
+      <div class="index-banner-textbox ibt-fashion">
+        <div class="ibt-text">
+          <span>WHERE PLUMBING MEETS FASHION</span>
+        </div>
+        <div class="ibt-underline">
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_repair.jpg">
+      <div class="index-banner-textbox ibt-repair">
+        <div class="ibt-text">
+          <span>REPAIR TO GET YOU OUT OF HOT WATER</span>
+        </div>
+        <div class="ibt-underline">
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_pipedecor.jpg">
+      <div class="index-banner-textbox ibt-pipedecor">
         <div class="ibt-text">
           <span>TRADITIONAL COMPANY WITH UNTRADITIONAL IDEAS</span>
         </div>

@@ -653,7 +653,7 @@ a.s-icon {
   /*text-shadow: 0 1px 2px rgba(0, 0, 0, .6);*/
 }
 @media screen and (min-width: 1081px) and (max-width: 1350px){
-  .ibt-img4 .ibt-text {
+  .ibt-pipedecor .ibt-text {
     font-size: 30pt;
   }
 }
@@ -669,14 +669,14 @@ a.s-icon {
     /*left: 20%;*/
     /*padding-bottom: 30px;*/
   }
-  .ibt-img0 {
+  .ibt-repair {
     padding: 30px 30px 0px 30px;
     height: 60%;
     width: 500px;
     top: 0%;
     right: 10%;
   }
-  .ibt-img1 {
+  .ibt-fashion {
     /* padding-top: 40px;
     width: 100%;
     top: 35%; */
@@ -688,10 +688,10 @@ a.s-icon {
     bottom: 10%;
     left: 0%;
   }
-  .ibt-img0 .ibt-underline {
+  .ibt-repair .ibt-underline {
     width: 175px;
   }
-  .ibt-img1 .ibt-underline {
+  .ibt-fashion .ibt-underline {
     width: 175px;
   }
   .ibt-img2 {
@@ -704,42 +704,42 @@ a.s-icon {
   .ibt-img2 .ibt-underline {
     width: 175px;
   }
-  .ibt-img3 {
+  .ibt-merch {
     padding: 40px 50px 0px 50px;
     height: 60%;
     width: 550px;
     top: 10%;
     right: 0%;
   }
-  .ibt-img3 .ibt-text {
+  .ibt-merch .ibt-text {
     line-height: 1.25em;
   }
-  .ibt-img3 .ibt-underline {
+  .ibt-merch .ibt-underline {
     width: 175px;
   }
-  .ibt-img4 {
+  .ibt-pipedecor {
     padding: 50px 30px 0px 30px;
     height: 100%;
     width: 700px;
     top: 40%;
     right: 10%;
   }
-  .ibt-img4 .ibt-text {
+  .ibt-pipedecor .ibt-text {
     line-height: 1.25em;
   }
-  .ibt-img4 .ibt-underline {
+  .ibt-pipedecor .ibt-underline {
     width: 175px;
   }
-  .ibt-img5 {
+  .ibt-rough {
     padding: 40px 30px 40px 30px;
     width: 500px;
     bottom: 0%;
     left: 45%;
   }
-  .ibt-img5 .ibt-text {
+  .ibt-rough .ibt-text {
     line-height: 1.25em;
   }
-  .ibt-img5 .ibt-underline {
+  .ibt-rough .ibt-underline {
     width: 175px;
   }
 }
@@ -748,7 +748,7 @@ a.s-icon {
   .ibt-text {
     font-size: 20pt;
   }
-  .ibt-img0, .ibt-img1, .ibt-img2, .ibt-img3, .ibt-img4, .ibt-img5 {
+  .ibt-repair, .ibt-fashion, .ibt-img2, .ibt-merch, .ibt-pipedecor, .ibt-rough {
     padding-top: 25px;
     width: 100%;
     top: 0%;

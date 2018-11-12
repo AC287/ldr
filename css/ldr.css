@@ -810,7 +810,7 @@ a.s-icon {
 .custaccord-m0 {
   padding-top: 20px;
   padding-bottom: 5px;
-  border-bottom: 0.1px solid #ededed;
+  /* border-bottom: 0.1px solid #ededed; */
 }
 .custaccord-m0 a{
   font-size: 12pt;
@@ -837,7 +837,7 @@ a.s-icon {
   /* padding-left: 5px; */
   padding-right: 5px;
   /* border-top: solid; */
-  border-bottom: 0.1px solid #ededed;
+  /* border-bottom: 0.1px solid #ededed; */
 }
 
 .custpanel {
@@ -874,7 +874,8 @@ a.s-icon {
   /*margin-right: 3px;*/
 }
 .custaccordion:hover {
-  background-color: #ddd;
+  /* background-color: #ddd; */
+  background-color: #f2f2f2;
   /* cursor: pointer; */
 }
 

@@ -18,7 +18,7 @@
         //This is m0
         echo "<div class='custaccord-m0 m0-$m0class'>";
         // echo "<img class='chev' src='http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-right.png'>";
-        echo "<a href='".home_url()."/products/categories/?m0=".urlencode($each_mc->m0)."'>".$each_mc->m0."</a>";
+        echo "<a href='".home_url()."/products/categories/?m0=".urlencode($each_mc->m0)."'>".strtoupper($each_mc->m0)."</a>";
         echo "</div>";
         echo "<div class='custpanel-m0 m0i-$m0class'>";
 

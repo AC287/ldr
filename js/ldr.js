@@ -166,27 +166,32 @@ switch(paramCounter) {
   //This will highlight current selection.
   case 1:
     $(m0paramInner).css({
-      'background-color':'#e5e5e5',
+      // 'background-color':'#e5e5e5',
+      'background-color':'#f2f2f2',
     })
   break;
   case 2:
     $('.m0i-'+m0param+' '+s1paramInner).css({
-      'background-color':'#e5e5e5',
+      'background-color':'#f2f2f2',
+      // 'background-color':'#e5e5e5',
     })
   break;
   case 3:
     $('.m0i-'+m0param+' '+'.s1i-'+s1param+' '+s2paramInner).css ({
-      'background-color':'#e5e5e5',
+      'background-color':'#f2f2f2',
+      // 'background-color':'#e5e5e5',
     })
   break;
   case 4:
     $('.m0i-'+m0param+' '+'.s1i-'+s1param+' '+'.s2i-'+s2param+' '+ s3paramInner).css ({
-      'background-color':'#e5e5e5',
+      'background-color':'#f2f2f2',
+      // 'background-color':'#e5e5e5',
     })
   break;
   case 5:
     $('.m0i-'+m0param+' '+'.s1i-'+s1param+' '+'.s2i-'+s2param+' '+ '.s3i-'+s3param+' '+s4paramInner).css ({
-      'background-color':'#e5e5e5',
+      'background-color':'#f2f2f2',
+      // 'background-color':'#e5e5e5',
     })
   default:
   break;

@@ -2,7 +2,7 @@
 // console.log('Javascript is running');
 
 jQuery(document).ready(function($) {
-
+  // console.log("TEST");
   //Adding responsive class to header navigation.
   $('.header-navicon').click(function(){
     var x = $('#header-rnav').attr('class').split(' ');
@@ -63,19 +63,19 @@ jQuery(document).ready(function($) {
 
 // source: https://codepen.io/brenden/pen/Kwbpyj
 $('.custaccordion img').click(function(e){
-  var $this = $(this).parent();
+  var $this = $(this).parent().parent();
   if($this.next().hasClass('show')){
     $this.next().removeClass('show');
-    $this.children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-right.png');
+    $this.find('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-right.png');
     $this.next();
   } else {
     // $this.parent().find('.panel').removeClass('show');
     // console.log('Else section. Find parent panel and removeClass show');
-    $this.children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-right.png');
+    $this.find('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-right.png');
     // $this.parent().find('.panel').slideUp(350);
     // console.log('Else section. Find parent panel and slideup.');
     $this.next().toggleClass('show');
-    $this.children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
+    $this.find('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
     $this.next();
   }
 });
@@ -131,28 +131,28 @@ if(m0param) {
   $('.m0i-'+m0param).toggleClass('show');
 
 
-  $(m0paramInner).children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
+  $(m0paramInner).find('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
 }
 
 if(s1param) {
 
   $('.s1i-'+s1param).toggleClass('show');
 
-  $(s1paramInner).children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
+  $(s1paramInner).find('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
 }
 
 if(s2param) {
 
   $('.s2i-'+s2param).toggleClass('show');
 
-  $(s2paramInner).children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
+  $(s2paramInner).find('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
 }
 
 if(s3param) {
 
   $('.s3i-'+s3param).toggleClass('show');
 
-  $(s3paramInner).children('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
+  $(s3paramInner).find('img').attr('src','http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-down.png');
 }
 
 // if(s4param) {

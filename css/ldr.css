@@ -3234,3 +3234,7 @@ color: #DA291C;
     font-size: 10pt;
   }
 }
+
+.error-container {
+  height: 50%;
+}

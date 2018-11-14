@@ -1,4 +1,4 @@
-<!--  Template Name: Career  -->
+ldrind.com<!--  Template Name: Career  -->
 
 <?php get_header(); ?>
 
@@ -23,10 +23,10 @@
 
 <div class="career-callout">
   <div class="container">
-    <p class="career-blusm">Cambridge is a fun and exciting place to work.</p>
+    <p class="career-blusm">LDR is a fun and exciting place to work.</p>
     <p class="career-blasm">It's a place where employees, regardless of what department they are in, can be sure that they will spend their time at work</p>
     <p class="career-blusm">"Solving interesting problems and creating value in their workspaces."</p>
-    <p class="career-blasm">If you are interested and qualified for any of the positions listed below, or if you think you can contribute to our company in another way, please email a cover letter and your resume to <a href="">info@cambridgeresources.com</a></p>
+    <p class="career-blasm">If you are interested and qualified for any of the positions listed below, or if you think you can contribute to our company in another way, please email a cover letter and your resume to <a href="mailto:info@ldrind.com">info@ldrind.com</a></p>
     <p class="career-blulg">We look forward to hearing from you.</p>
   </div>
 </div>
@@ -47,7 +47,7 @@
             echo "<div class='career-open-each'>";
               echo "<div class='coe-email'>";
                 echo "<span class='glyphicon glyphicon-envelope' aria-hidden='true'></span>";
-                echo "<a href='mailto:info@cambridgeresources.com?subject=CAREER - ".$careerinner->position."'>E-mail Us</a>";
+                echo "<a href='mailto:info@ldrind.com?subject=CAREER - ".$careerinner->position."'>E-mail Us</a>";
               echo "</div>";
               echo "<div class='coe-position'>".$careerinner->position."</div>";
               echo "<div class='coe-location'>".$careerinner->location."</div>";
@@ -93,7 +93,7 @@
             echo "<div class='career-modal-contents'>";
               echo "<div class='coe-email'>";
               echo "<span class='glyphicon glyphicon-envelope' aria-hidden='true'></span>";
-              echo "<a href='mailto:info@cambridgeresources.com?subject=CAREER - ".$careerinner->position."'>E-mail Us</a>";
+              echo "<a href='mailto:info@ldrind.com?subject=CAREER - ".$careerinner->position."'>E-mail Us</a>";
               echo "</div>";
               echo "<div class='coe-position'>".$careerinner->position."</div>";
               echo "<div class='coe-location'>".$careerinner->location."</div>";
@@ -150,7 +150,7 @@
           <!-- </div>-->  <!-- .entry-content -->
         <!-- </article> -->   <!-- #post -->
       <!-- <?php //endwhile; // end of the loop. ?> -->
-      <p class="career-blaxs">Cambridge is an equal opportunity employer with a wonderfully diverse workforce. We are proud of our diversity and encourage people from all walks of life to come play for our team.</p>
+      <p class="career-blaxs">LDR is an equal opportunity employer with a wonderfully diverse workforce. We are proud of our diversity and encourage people from all walks of life to come play for our team.</p>
     </div>
   </div>
 </div>

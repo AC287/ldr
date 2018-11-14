@@ -7,6 +7,7 @@
     <?php wp_head(); ?>
     <?php
       $curLocation = $_SERVER['REQUEST_URI'];
+      $curAddr = $_SERVER["REMOTE_ADDR"];
       $curLocationArr = array_values(array_filter(explode('/',$curLocation)));
       //Split string at "/" and make the string into array. array_filter remove empty array element. array_values restructure array.
       // print_r($_SERVER);
@@ -34,6 +35,8 @@
   </head>
 
   <body>
+
+    <?php print_r($curAddr); ?>
 
     <div id="all-container">
       <div class="top-nav">
@@ -194,12 +197,12 @@
                 </a>
               </div>
               <div class="nav2-logo nav2-exquisite">
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/logo/exquisite.png" >
                 </a>
               </div>
               <div class="nav2-logo nav2-slk">
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/logo/slk.png" >
                 </a>
               </div>

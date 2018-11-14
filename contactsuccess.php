@@ -27,7 +27,7 @@
         $response = "";
 
         $message_sent    = "Thanks! Your message has been sent.";
-        $message_spam    = "Spam detected. Please send your inquiry to info@codaresources.com";
+        $message_spam    = "Spam detected. Please send your inquiry to sales@ldrind.com";
         include 'phpsnippet/google_captcha.php';
         //user posted variables
         $name = $_POST['contact-name'];
@@ -41,7 +41,6 @@
         $to = "sales@ldrind.com";
         $subject = "LDR web contact from $name";
         $headers = array(
-          // 'From: CODA Web Contact Form <no-reply@codaresources.com>',
           'Reply-To: '.$email
         );
         $headers = implode("\r\n", $headers);
@@ -84,7 +83,7 @@
       <!-- <?php
       /*
         global $wpdb;
-        $salesmanager = $wpdb->get_results("SELECT * FROM wp_codasalesmanager ORDER BY sort ASC;");
+        $salesmanager = $wpdb->get_results("SELECT * FROM wp_ldrsalesmanager ORDER BY sort ASC;");
         foreach ($salesmanager as $salesmanager1){
           echo "<div class='contact-salesmanager-each'>";
             echo "<div class='contact-salesmanager-img'>";

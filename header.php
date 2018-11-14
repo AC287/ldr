@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
     <?php
       $curLocation = $_SERVER['REQUEST_URI'];
-      $curAddr = $_SERVER["SERVER_NAME"];
+      $curServer = $_SERVER["SERVER_NAME"];
       $curLocationArr = array_values(array_filter(explode('/',$curLocation)));
       //Split string at "/" and make the string into array. array_filter remove empty array element. array_values restructure array.
       // print_r($_SERVER);
@@ -36,7 +36,29 @@
 
   <body>
 
-    <?php print_r($curAddr); ?>
+    <?php
+      //This determine which link to use for local/test/live sites...
+      $cambridgeSite = "";
+      $codaSite = "";
+      switch($curServer) {
+        case "127.0.0.1":
+          $cambridgeSite = "http://127.0.0.1/product-demo/";
+          $codaSite = "http://127.0.0.1/codadev/";
+        break;
+        case "test3.arthurchen.info":
+          $cambridgeSite = "http://test1.arthurchen.info/";
+          $codaSite = "http://test2.arthurchen.info/";
+        break;
+        case "ldr.codacambridge.com":
+          $cambridgeSite = "http://cambridge.codacambridge.com/";
+          $codaSite = "http://coda.codacambridge.com/";
+        break;
+        case "ldrind.com":
+          $cambridgeSite = "http://cambridgeresources.com/";
+          $codaSite = "http://codaresources.com/";
+        break;
+      }
+    ?>
 
     <div id="all-container">
       <div class="top-nav">
@@ -212,12 +234,12 @@
                 </a>
               </div>
               <div class="nav2-logo nav2-cambridge">
-                <a href="http://www.cambridgeresources.com/" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo $cambridgeSite ?>" target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/brands/cambridge_pms293.png" >
                 </a>
               </div>
               <div class="nav2-logo nav2-coda">
-                <a href="http://www.codaresources.com/" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo $codaSite ?>" target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/brands/codadev_logo.png" >
                 </a>
               </div>

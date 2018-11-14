@@ -1,4 +1,4 @@
-<!--  Template Name: Industries  -->
+<!--  Template Name: PLUMBING  -->
 
 <?php get_header(); ?>
 
@@ -9,7 +9,7 @@
   <div class="about-beginning-title">
     <div class="abt-container">
       <div class="index-title1">
-        <span>INDUSTRIES WE CARRY</span>
+        <span>LINES WE CARRY</span>
       </div>
       <div class="index-title1-underline">
       </div>

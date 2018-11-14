@@ -80,11 +80,11 @@
                   </a>
                 </div>
                 <div class="hmn-container">
-                  <a class="industries" href="<?php echo home_url();?>/industries/">
-                    <div class="header-navi-title">INDUSTRIES</div>
+                  <a class="plumbing" href="<?php echo home_url();?>/plumbing/">
+                    <div class="header-navi-title">PLUMBING</div>
                     <div class="hnt-selector-container">
                       <?php
-                      if(in_array('industries',$curLocationArr)){
+                      if(in_array('plumbing',$curLocationArr)){
                         $display = "block";
                       } else {
                         $display = "none";
@@ -170,15 +170,15 @@
                 </a>
               </div>
               <div class="nav2-logo nav2-exquisite">
-                <a target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo home_url();?>/products/categories/?m0=Fashion" target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/logo/exquisite.png" >
                 </a>
               </div>
-              <div class="nav2-logo nav2-slk">
+              <!-- <div class="nav2-logo nav2-slk">
                 <a target="_blank" rel="noopener noreferrer">
-                  <img src="<?php bloginfo('template_directory')?>/images/logo/slk.png" >
+                  <img src="<?php //bloginfo('template_directory')?>/images/logo/slk.png" >
                 </a>
-              </div>
+              </div> -->
               <div class="nav2-logo nav2-pipedecor">
                 <a href="http://pipe-decor.com/" target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/logo/pipedecor.png" >
@@ -189,11 +189,11 @@
                   <img src="<?php bloginfo('template_directory')?>/images/brands/cambridge_pms293.png" >
                 </a>
               </div>
-              <div class="nav2-logo nav2-coda">
-                <a href="<?php echo $codaSite ?>" target="_blank" rel="noopener noreferrer">
+              <!-- <div class="nav2-logo nav2-coda">
+                <a href="<?php //echo $codaSite ?>" target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/brands/codadev_logo.png" >
                 </a>
-              </div>
+              </div> -->
             </div>
             <div class="nav2-search">
               <form action='<?php echo home_url();?>/products/search' method='get' autocomplete="off">

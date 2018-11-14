@@ -55,9 +55,9 @@
     </div>
     <div class='contact-phaddress'>
       <div class='contact-phaddress-ph'>
-        <span>National Tollfree: 800.545.5230</span>
-        <span>Outside the U.S.: 773.265.3000</span>
-        <span>24-Hour Fax: 773.265.3130</span>
+        <span>P.800.545.5230</span>
+        <span>P.773.265.3000</span>
+        <span>F.773.265.3130</span>
       </div>
       <div class='contact-phaddress-address'>
         <p>600 N. Kilbourn Avenue, Chicago, IL 60624</p>

@@ -1,5 +1,4 @@
 <?php
-
   /*
     NOTES:
       This is a manual input.

@@ -267,27 +267,32 @@
                     // }
                     echo "<a class='sec-item-num' href='".home_url()."/products/item/?id=".urlencode($exactProd->item)."&m0=".urlencode($exactProd->m0)."&s1=".urlencode($exactProd->s1)."&s2=".urlencode($exactProd->s2)."&s3=".urlencode($exactProd->s3)."&s4=".urlencode($exactProd->s4)."'>".$exactProd->item."</a>";
                       echo "<p>";
-                      echo $exactProd->m0." > ";
+                      echo "<a class='search-catlink' href='".home_url()."/products/categories/?m0=".urlencode($exactProd->m0)."'>";
+                      echo $exactProd->m0;
+                      echo "</a>";
                       if($exactProd->s1){
+                        echo " > ";
+                        echo "<a class='search-catlink' href='".home_url()."/products/categories/?m0=".urlencode($exactProd->m0)."&s1=".urlencode($exactProd->s1)."'>";
                         echo $exactProd->s1;
-                        if(!empty($exactProd->s2)){
-                          echo " > ";
-                        }
+                        echo "</a>";
                       }
                       if($exactProd->s2){
+                        echo " > ";
+                        echo "<a class='search-catlink' href='".home_url()."/products/categories/?m0=".urlencode($exactProd->m0)."&s1=".urlencode($exactProd->s1)."&s2=".urlencode($exactProd->s2)."'>";
                         echo $exactProd->s2;
-                        if(!empty($exactProd->s3)){
-                          echo " > ";
-                        }
+                        echo "</a>";
                       }
                       if($exactProd->s3){
+                        echo " > ";
+                        echo "<a class='search-catlink' href='".home_url()."/products/categories/?m0=".urlencode($exactProd->m0)."&s1=".urlencode($exactProd->s1)."&s2=".urlencode($exactProd->s2)."&s3=".urlencode($exactProd->s3)."'>";
                         echo $exactProd->s3;
-                        if(!empty($exactProd->s4)){
-                          echo " > ";
-                        }
+                        echo "</a>";
                       }
                       if($exactProd->s4){
+                        echo " > ";
+                        echo "<a class='search-catlink' href='".home_url()."/products/categories/?m0=".urlencode($exactProd->m0)."&s1=".urlencode($exactProd->s1)."&s2=".urlencode($exactProd->s2)."&s3=".urlencode($exactProd->s3)."&s4=".urlencode($exactProd->s4)."'>";
                         echo $exactProd->s4;
+                        echo "</a>";
                       }
                     echo "</p>";
                   echo "</div>";  // end seci-title

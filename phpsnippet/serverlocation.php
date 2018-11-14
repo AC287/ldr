@@ -25,31 +25,22 @@
   $cambridgeSite = "";
   $codaSite = "";
   $ldrSite = "";
-  switch($curServer) {
-    case "127.0.0.1":
-      //local server
-      $cambridgeSite = "http://127.0.0.1/product-demo/";
-      $codaSite = "http://127.0.0.1/codadev/";
-      $ldrSite = "http://127.0.0.1/ldr/";
-    break;
-    case ("test1.arthurchen.info" || "test2.arthurchen.info" || "test3.arthurchen.info"):
-      //personal test server on HostGator.
-      $cambridgeSite = "http://test1.arthurchen.info/";
-      $codaSite = "http://test2.arthurchen.info/";
-      $ldrSite = "http://test3.arthurchen.info/";
-    break;
-    case ("https://cambridge.codacambridge.com" || "https://coda.codacambridge.com" || "https://ldr.codacambridge.com"):
-      //Final test server on Bluehost.
-      $cambridgeSite = "https://cambridge.codacambridge.com/";
-      $codaSite = "https://coda.codacambridge.com/";
-      $ldrSite = "https://ldr.codacambridge.com";
-    break;
-    default:
-      //LIVE
-      $cambridgeSite = "http://cambridgeresources.com/";
-      $codaSite = "http://codaresources.com/";
-      $ldrSite = "http://ldrind.com/";
-    break;
+  if($curServer=="127.0.0.1") {
+    $cambridgeSite = "http://127.0.0.1/product-demo/";
+    $codaSite = "http://127.0.0.1/codadev/";
+    $ldrSite = "http://127.0.0.1/ldr/";
+  } elseif ($curServer=="test1.arthurchen.info" || $curServer=="test2.arthurchen.info" || $curServer=="test3.arthurchen.info") {
+    $cambridgeSite = "http://test1.arthurchen.info/";
+    $codaSite = "http://test2.arthurchen.info/";
+    $ldrSite = "http://test3.arthurchen.info/";
+  } elseif ($curServer=="cambridge.codacambridge.com" || $curServer=="coda.codacambridge.com" || $curServer=="ldr.codacambridge.com") {
+    $cambridgeSite = "https://cambridge.codacambridge.com/";
+    $codaSite = "https://coda.codacambridge.com/";
+    $ldrSite = "https://ldr.codacambridge.com";
+  } else {
+    $cambridgeSite = "http://cambridgeresources.com/";
+    $codaSite = "http://codaresources.com/";
+    $ldrSite = "http://ldrind.com/";
   }
 
 ?>

@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
     <?php
       $curLocation = $_SERVER['REQUEST_URI'];
-      $curAddr = $_SERVER["REMOTE_ADDR"];
+      $curAddr = $_SERVER["SERVER_NAME"];
       $curLocationArr = array_values(array_filter(explode('/',$curLocation)));
       //Split string at "/" and make the string into array. array_filter remove empty array element. array_values restructure array.
       // print_r($_SERVER);

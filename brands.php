@@ -5,7 +5,40 @@
 <div class="brands-backcolor">
   <div class="container">
     <div class="overall-brands-container">
-      <div class="brands-container">  <!--   CAMBRIDGE   -->
+
+      <!--   Exquisite   -->
+      <div class="brands-container">
+        <img src="<?php bloginfo('template_directory')?>/images/brands/exquisite_brand.png">
+        <div class="brands-overlay">
+          <div class="brandsoverlay-logo">
+            <img class="brands-img" src="<?php bloginfo('template_directory')?>/images/logo/exquisite.png" style="height:auto; width:225px">
+          </div>
+          <div class="brandsoverlay-text">
+            <p>Exquisite is LDRís step-up line of faucets, shower, toilet seats and bath accessories.</p>
+            <p>LDR strives to stay on top of the fashion trends in plumbing and our Exquisite line keeps customers current!</p>
+            <a href="<?php echo home_url();?>/products/categories/?m0=Fashion" target="_blank" rel="noopener noreferrer">View Products >></a>
+          </div>
+        </div>
+      </div> <!--  end brands-container  -->
+
+      <!--  PIPEDECOR  -->
+      <div class="brands-container">
+        <img src="<?php bloginfo('template_directory')?>/images/brands/pipedecor.png">
+        <div class="brands-overlay">
+          <div class="brandsoverlay-logo">
+            <!-- <div class="brands-text">Hello World</div> -->
+            <img class="brands-img" src="<?php bloginfo('template_directory')?>/images/brands/pipedecor_logo.png" style="height:24px; width: auto">
+          </div>
+          <div class="brandsoverlay-text">
+            <p>From tables, to lamps, shelving units, bed frames, and wine racks, Pipe Decor is the new alternative to modern furniture and home decoration. With an incredible selection of fittings, nipples, pipe, and exclusively patented specialty items, build whatever your imagination can come up with.</p>
+            <p>Also available kits on the go for easy 1-2-3 assembly.</p>
+            <a href="http://www.pipe-decor.com" target="_blank" rel="noopener noreferrer">Visit Site >> </a>
+          </div>
+        </div>
+      </div> <!--  end brands-container  -->
+
+      <!--   CAMBRIDGE   -->
+      <div class="brands-container">
         <img src="<?php bloginfo('template_directory')?>/images/brands/cambridge_brand.png">
         <div class="brands-overlay">
           <div class="brandsoverlay-logo">
@@ -60,20 +93,8 @@
           </div>
         </div>
       </div> -->
-      <div class="brands-container">  <!--  PIPEDECOR  -->
-        <img src="<?php bloginfo('template_directory')?>/images/brands/pipedecor.png">
-        <div class="brands-overlay">
-          <div class="brandsoverlay-logo">
-            <!-- <div class="brands-text">Hello World</div> -->
-            <img class="brands-img" src="<?php bloginfo('template_directory')?>/images/brands/pipedecor_logo.png" style="height:24px; width: auto">
-          </div>
-          <div class="brandsoverlay-text">
-            <p>From tables, to lamps, shelving units, bed frames, and wine racks, Pipe Decor is the new alternative to modern furniture and home decoration. With an incredible selection of fittings, nipples, pipe, and exclusively patented specialty items, build whatever your imagination can come up with.</p>
-            <p>Also available kits on the go for easy 1-2-3 assembly.</p>
-            <a href="http://www.pipe-decor.com" target="_blank" rel="noopener noreferrer">Visit Site >> </a>
-          </div>
-        </div>
-      </div> <!--  end brands-container  -->
+
+
     </div>  <!--  end overall-brands-container  -->
   </div>
 </div>

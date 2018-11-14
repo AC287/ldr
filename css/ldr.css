@@ -3137,7 +3137,7 @@ color: #DA291C;
   width: 100%;
 }
 
-.sec-item-num {
+a.sec-item-num {
   text-decoration: none;
   font-family: 'bignoodletitlingregular', cursive;
   font-size: 24pt;

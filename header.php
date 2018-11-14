@@ -5,61 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <title><?php bloginfo('name');?></title> -->
     <?php wp_head(); ?>
-    <?php
-      $curLocation = $_SERVER['REQUEST_URI'];
-      $curServer = $_SERVER["SERVER_NAME"];
-      $curLocationArr = array_values(array_filter(explode('/',$curLocation)));
-      //Split string at "/" and make the string into array. array_filter remove empty array element. array_values restructure array.
-      // print_r($_SERVER);
-      if($_SERVER["REMOTE_ADDR"]=="127.0.0.1"){   //Set whether this is dev or live.
-        $local=True;
-        // array_splice($curLocationArr, 0, 1); // This removes local 1st folder path.
-        unset($curLocationArr[0]);
-        $curLocationArr = array_values($curLocationArr);
-
-      } else {
-        $local=False;
-
-      }
-
-      for($x=0; $x < count($curLocationArr); $x++){
-        if((int)$curLocationArr[$x]!=0) {
-          $curLocationArr[$x] = (int)$curLocationArr[$x];
-        }
-      }
-
-
-    ?>
-
     <?php include 'phpsnippet/titletag.php';?>
   </head>
 
   <body>
-
-    <?php
-      //This determine which link to use for local/test/live sites...
-      $cambridgeSite = "";
-      $codaSite = "";
-      switch($curServer) {
-        case "127.0.0.1":
-          $cambridgeSite = "http://127.0.0.1/product-demo/";
-          $codaSite = "http://127.0.0.1/codadev/";
-        break;
-        case "test3.arthurchen.info":
-          $cambridgeSite = "http://test1.arthurchen.info/";
-          $codaSite = "http://test2.arthurchen.info/";
-        break;
-        case "ldr.codacambridge.com":
-          $cambridgeSite = "http://cambridge.codacambridge.com/";
-          $codaSite = "http://coda.codacambridge.com/";
-        break;
-        case "ldrind.com":
-          $cambridgeSite = "http://cambridgeresources.com/";
-          $codaSite = "http://codaresources.com/";
-        break;
-      }
-    ?>
-
+    <?php include 'phpsnippet/serverlocation.php';?>
     <div id="all-container">
       <div class="top-nav">
         <div class="container">

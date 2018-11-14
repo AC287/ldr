@@ -38,7 +38,7 @@
         $contents = "Name: $name \nEmail: $email \nPhone: $phone \nCompany: $company \nMessage: $message";
 
         //php mailer variables
-        $to = "sales@ldrind.com";
+        $to = "akennedy@ldrind.com";
         $subject = "LDR web contact from $name";
         $headers = array(
           'Reply-To: '.$email

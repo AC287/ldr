@@ -17,7 +17,7 @@
       if(!empty($s1_category[0]->s1)) {
         //This is m0
         echo "<div class='custaccord-m0 m0-$m0class'>";
-        // echo "<img class='chev' src='http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-right.png'>";
+        // echo "<img class='chev' src='https://storage.codacambridge.com/files/icons/chev-right.png'>";
         echo "<a href='".home_url()."/products/categories/?m0=".urlencode($each_mc->m0)."'>".strtoupper($each_mc->m0)."</a>";
         echo "</div>";
         echo "<div class='custpanel-m0 m0i-$m0class'>";
@@ -31,7 +31,7 @@
             // s2 is not empty
             echo "<div class='custaccordion s1-$s1class'>";
             echo "<div class='accord-s1container'>";
-            echo "<img class='chev' src='http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-right.png'>";
+            echo "<img class='chev' src='https://storage.codacambridge.com/files/icons/chev-right.png'>";
             echo "<a class='custaccordion-s1a' href='".home_url()."/products/categories/?m0=".urlencode($each_mc->m0)."&s1=".urlencode($each_s1->s1)."'>".$each_s1->s1."</a>";
             echo "</div>"; // end accord-s1container;
             echo "</div>";
@@ -45,7 +45,7 @@
               if(!empty($s3_category[0]->s3)) {
                 echo "<div class='custaccordion s2-$s2class'>";
                 echo "<div class='accord-s2container'>";
-                echo "<img class='chev' src='http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-right.png'>";
+                echo "<img class='chev' src='https://storage.codacambridge.com/files/icons/chev-right.png'>";
                 echo "<a class='custaccordion-s2a' href='".home_url()."/products/categories/?m0=".urlencode($each_mc->m0)."&s1=".urlencode($each_s1->s1)."&s2=".urlencode($each_s2->s2)."'>".$each_s2->s2."</a>";
                 echo "</div>"; // end accord-s2container;
                 echo "</div>";
@@ -59,7 +59,7 @@
                   if(!empty($s4_category[0]->s4)) {
                     echo "<div class='custaccordion s3-$s3class'>";
                     echo "<div class='accord-s3container'>";
-                    echo "<img class='chev' src='http://files.coda.com.s3.amazonaws.com/imgv2/icons/chev-right.png'>";
+                    echo "<img class='chev' src='https://storage.codacambridge.com/files/icons/chev-right.png'>";
                     echo "<a class='custaccordion-s3a' href='".home_url()."/products/categories/?m0=".urlencode($each_mc->m0)."&s1=".urlencode($each_s1->s1)."&s2=".urlencode($each_s2->s2)."&s3=".urlencode($each_s3->s3)."'>".$each_s3->s3."</a>";
                     echo "</div>"; // end accord-s3container;
                     echo "</div>";

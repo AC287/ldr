@@ -147,6 +147,7 @@ input:focus::-ms-input-placeholder {
 .header-socialmedia {
   text-align: right;
   display: block;
+  height: 35px;
 }
 
 a.s-icon {

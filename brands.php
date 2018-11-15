@@ -1,6 +1,7 @@
 <!--  Template Name: Brands -->
 
 <?php get_header(); ?>
+<?php include 'phpsnippet/serverlocation.php';?>
 
 <div class="brands-backcolor">
   <div class="container">

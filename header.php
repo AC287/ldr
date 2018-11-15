@@ -19,7 +19,7 @@
               <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_directory')?>/images/logo/ldr_white_h40px.png"></a>
             </div>  <!-- end ldr-logo-white -->
             <div class="header-socialmedia">
-              <a class="s-icon" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cambridgeresources/">
+              <!-- <a class="s-icon" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cambridgeresources/">
                 <span class="fa fa-facebook-official"></span>
               </a>
               <a class="s-icon" target="_blank" rel="noopener noreferrer" href="https://twitter.com/CambridgeRes">
@@ -27,7 +27,7 @@
               </a>
               <a class="s-icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/cambridgeresources/">
                 <span class="fa fa-linkedin-square"></span>
-              </a>
+              </a> -->
             </div>  <!--  end header-socialmedia  -->
             <div class="header-nav-container">
               <div id="header-rnav" class="header-mnav">

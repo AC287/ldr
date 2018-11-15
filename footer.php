@@ -47,7 +47,7 @@
         <p>&copy <?php echo date('Y')?> LDR Global Industries. All rights reserved.</p>
       </div>
       <div class="footer-socialmedia">
-        <a class="navi-margin s-icon" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cambridgeresources/">
+        <!-- <a class="navi-margin s-icon" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cambridgeresources/">
           <i class="fa fa-facebook-official"></i>
         </a>
         <a class="navi-margin s-icon" target="_blank" rel="noopener noreferrer" href="https://twitter.com/CambridgeRes">
@@ -55,7 +55,7 @@
         </a>
         <a class="navi-margin s-icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/cambridgeresources/">
           <span class="fa fa-linkedin-square"></span>
-        </a>
+        </a> -->
       </div>  <!--end footer-socialmedia-->
     </div>  <!--  end container -->
   </footer>

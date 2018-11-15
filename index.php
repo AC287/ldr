@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <!-- <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p> -->
-<?php /*
+<?php
+/*
   if (have_posts()):
   while (have_posts()) : the_post();?>
 
@@ -14,7 +15,9 @@
     echo '<p>No content found</p>';
 
   endif;
-*/?>
+*/
+include 'phpsnippet/serverlocation.php';
+?>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -161,12 +164,12 @@
   </div> <!-- end container -->
 </div> <!-- end general-category-->
 <!--  MID-MENU  -->
-<div class="mid-menu">
+<div class="mid-menu" style='height:45px'>
   <div class="container">
     <span id="mid-menu-menu">
       <!-- <a href="">NEW PRODUCTS</a>
       <span class="mm-divider">|</span> -->
-      <a href="<?php echo home_url();?>/tradeshows/">TRADESHOWS</a>
+      <!-- <a href="<?php //echo home_url();?>/tradeshows/">TRADESHOWS</a> -->
       <!-- <span class="mm-divider">|</span>
       <a href="<?php //echo home_url();?>/news/">NEWS</a> -->
     </span>
@@ -213,7 +216,7 @@
         <div class="collapse index-midcategory-contents" id="imc-indexwholesale">
           <!-- <div class="mc-border">ORIGINAL EQUIPMENT <br/>MANUFACTURER</div> -->
           <div class="mc-txt">
-            <p>LDR caters to the wholesale market by offering bulk options for most of their sku's.</p>
+            <p>LDR's sister company Cambridge caters to the wholesale market by offering bulk options on many of the Rough Plumbing sku's. <a href="<?php echo $cambridgeSite; ?>">Click here</a> to check out their website.</p>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@
         Shower &amp; Bath
       </div>
       <div class="ind-cat-txt">
-        <p>LDR carries a complete line of bath and shower products, including showerheads, caddies, pedestals, toilet seats, shelving, storage and safety. Always keeping up with the latest trends but also offering older models for those who need a quick replacement, we make it a room you never want to leave!</p>
+        <p>LDR carries a complete line of bath and shower products, including showerheads, caddies, faucets, toilet seats, shelving, storage and safety. Always keeping up with the latest trends but also offering older models for those who need a quick replacement, we make it a room you never want to leave!</p>
       </div>
     </div>
   </div>  <!--  end container  -->
@@ -59,7 +59,7 @@
         Kitchen &amp; Laundry
       </div>
       <div class="ind-cat-txt">
-        <p>LDR understands the importance of your kitchen and laundry room, and wants you to enjoy them in style. Introducing new designs every couple of months, make sure to keep coming back to check out our collection!</p>
+        <p>LDR understands the importance of your kitchen and laundry room, and wants you to enjoy them in style. We introduce new designs regularly, so make sure to keep coming back to check out our collection!</p>
       </div>
     </div>
   </div>  <!--  end container  -->

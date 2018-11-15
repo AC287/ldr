@@ -15,7 +15,7 @@
             <img class="brands-img" src="<?php bloginfo('template_directory')?>/images/logo/exquisite.png" style="height:auto; width:225px">
           </div>
           <div class="brandsoverlay-text">
-            <p>Exquisite is LDRís step-up line of faucets, shower, toilet seats and bath accessories.</p>
+            <p>Exquisite is LDR's step-up line of faucets, shower, toilet seats and bath accessories.</p>
             <p>LDR strives to stay on top of the fashion trends in plumbing and our Exquisite line keeps customers current!</p>
             <a href="<?php echo home_url();?>/products/categories/?m0=Fashion" target="_blank" rel="noopener noreferrer">View Products >></a>
           </div>

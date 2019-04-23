@@ -5,31 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <title><?php bloginfo('name');?></title> -->
     <?php wp_head(); ?>
-    <?php
-      $curLocation = $_SERVER['REQUEST_URI'];
-      $curLocationArr = array_values(array_filter(explode('/',$curLocation)));
-      //Split string at "/" and make the string into array. array_filter remove empty array element. array_values restructure array.
-      // print_r($_SERVER);
-      if($_SERVER["REMOTE_ADDR"]=="127.0.0.1"){   //Set whether this is dev or live.
-        $local=True;
-        // array_splice($curLocationArr, 0, 1); // This removes local 1st folder path.
-        unset($curLocationArr[0]);
-        $curLocationArr = array_values($curLocationArr);
-
-      } else {
-        $local=False;
-
-      }
-
-      for($x=0; $x < count($curLocationArr); $x++){
-        if((int)$curLocationArr[$x]!=0) {
-          $curLocationArr[$x] = (int)$curLocationArr[$x];
-        }
-      }
-
-
-    ?>
-
+    <?php include 'phpsnippet/serverlocation.php';?>
     <?php include 'phpsnippet/titletag.php';?>
   </head>
 
@@ -43,7 +19,7 @@
               <a href="<?php echo home_url();?>"><img src="<?php bloginfo('template_directory')?>/images/logo/ldr_white_h40px.png"></a>
             </div>  <!-- end ldr-logo-white -->
             <div class="header-socialmedia">
-              <a class="s-icon" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cambridgeresources/">
+              <!-- <a class="s-icon" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cambridgeresources/">
                 <span class="fa fa-facebook-official"></span>
               </a>
               <a class="s-icon" target="_blank" rel="noopener noreferrer" href="https://twitter.com/CambridgeRes">
@@ -51,7 +27,7 @@
               </a>
               <a class="s-icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/cambridgeresources/">
                 <span class="fa fa-linkedin-square"></span>
-              </a>
+              </a> -->
             </div>  <!--  end header-socialmedia  -->
             <div class="header-nav-container">
               <div id="header-rnav" class="header-mnav">
@@ -104,11 +80,11 @@
                   </a>
                 </div>
                 <div class="hmn-container">
-                  <a class="industries" href="<?php echo home_url();?>/industries/">
-                    <div class="header-navi-title">INDUSTRIES</div>
+                  <a class="plumbing" href="<?php echo home_url();?>/plumbing/">
+                    <div class="header-navi-title">PLUMBING</div>
                     <div class="hnt-selector-container">
                       <?php
-                      if(in_array('industries',$curLocationArr)){
+                      if(in_array('plumbing',$curLocationArr)){
                         $display = "block";
                       } else {
                         $display = "none";
@@ -194,30 +170,30 @@
                 </a>
               </div>
               <div class="nav2-logo nav2-exquisite">
-                <a href="" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo home_url();?>/products/categories/?m0=Fashion" target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/logo/exquisite.png" >
                 </a>
               </div>
-              <div class="nav2-logo nav2-slk">
-                <a href="" target="_blank" rel="noopener noreferrer">
-                  <img src="<?php bloginfo('template_directory')?>/images/logo/slk.png" >
+              <!-- <div class="nav2-logo nav2-slk">
+                <a target="_blank" rel="noopener noreferrer">
+                  <img src="<?php //bloginfo('template_directory')?>/images/logo/slk.png" >
                 </a>
-              </div>
+              </div> -->
               <div class="nav2-logo nav2-pipedecor">
                 <a href="http://pipe-decor.com/" target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/logo/pipedecor.png" >
                 </a>
               </div>
               <div class="nav2-logo nav2-cambridge">
-                <a href="http://www.cambridgeresources.com/" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo $cambridgeSite ?>" target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/brands/cambridge_pms293.png" >
                 </a>
               </div>
-              <div class="nav2-logo nav2-coda">
-                <a href="http://www.codaresources.com/" target="_blank" rel="noopener noreferrer">
+              <!-- <div class="nav2-logo nav2-coda">
+                <a href="<?php //echo $codaSite ?>" target="_blank" rel="noopener noreferrer">
                   <img src="<?php bloginfo('template_directory')?>/images/brands/codadev_logo.png" >
                 </a>
-              </div>
+              </div> -->
             </div>
             <div class="nav2-search">
               <form action='<?php echo home_url();?>/products/search' method='get' autocomplete="off">

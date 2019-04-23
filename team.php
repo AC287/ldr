@@ -15,7 +15,7 @@
     <?php
       global $wpdb;
 
-      $team = $wpdb->get_results("SELECT * FROM wp_personnel ORDER BY sort ASC;");
+      $team = $wpdb->get_results("SELECT * FROM wp_ldrpersonnel ORDER BY sort ASC;");
       // print_r(sizeof($team));
       foreach($team as $teaminner) {
         echo "<div class='team-individualimg'>";
@@ -27,6 +27,7 @@
           echo "<div class='team-individualtitle'>".$teaminner->title."</div>";
         echo "</div>";
       }
+      /*
       echo "<div class='team-modal'>";
         echo "<div class='team-modal-container'>";
           echo "<span class='team-close glyphicon glyphicon-remove'></span>";
@@ -48,6 +49,7 @@
           }
         echo "</div>";  // end team-modal-container;
       echo "</div>";  // end team-modal;
+      */
       // unset($team);
       // print_r($team);
       ?>
@@ -55,21 +57,22 @@
   </div>
 </div>  <!--  end container -->
 
-<div class='team-salesmanager'>
+<!-- <div class='team-salesmanager'>
   <div class='container'>
     <div class="team-salesmanager-section">
       <span>SALES MANAGERS</span>
       <div class="team-salesmanager-section-underline">
       </div>
-    </div>
-    <div class='team-mapcontainer'>
-      <?php
+    </div> -->
+    <!-- <div class='team-mapcontainer'> -->
+      <!-- <?php
       //  map images from http://readysetraphael.com/
-      include("images/usmap2.svg");
-      ?>
-    </div>
-    <div class='team-salesmanager-container'>
-      <?php
+      // include("images/usmap2.svg");
+      ?> -->
+    <!-- </div> -->
+    <!-- <div class='team-salesmanager-container'> -->
+      <!-- <?php
+      /*
         global $wpdb;
         $salesmanager = $wpdb->get_results("SELECT * FROM wp_camsalesmanager WHERE active='y' ORDER BY sort ASC;");
         foreach ($salesmanager as $salesmanager1){
@@ -84,10 +87,11 @@
             echo "<div class='team-salesmanager-text'><span>".strtoupper($salesmanager1->text)."</span></div>";
           echo "</div>";
         }
-      ?>
-    </div>
-  </div>  <!--  end container  -->
-</div>  <!--  end team-salesmanager class -->
+        */
+      ?> -->
+    <!-- </div> -->
+  <!-- </div>  -->
+<!-- </div>  -->
 
 
 <?php get_footer(); ?>

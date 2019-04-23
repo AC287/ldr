@@ -1,4 +1,4 @@
-<!--  Template Name: Industries  -->
+<!--  Template Name: PLUMBING  -->
 
 <?php get_header(); ?>
 
@@ -9,7 +9,7 @@
   <div class="about-beginning-title">
     <div class="abt-container">
       <div class="index-title1">
-        <span>INDUSTRIES WE CARRY</span>
+        <span>LINES WE CARRY</span>
       </div>
       <div class="index-title1-underline">
       </div>
@@ -17,17 +17,17 @@
   </div>
 </div>
 
-<div class="ind-cat ind-kitchenlaundry">
+<div class="ind-cat ind-roughplumbing">
   <div class="container">
     <div class="ind-cat-img">
-      <img src="<?php bloginfo('template_directory')?>/images/web_thumb_img/industries-kitchenlaundry.jpg">
+      <img src="<?php bloginfo('template_directory')?>/images/web_thumb_img/industries-rough.jpg">
     </div>
     <div class="ind-cat-desc">
       <div class="ind-cat-title">
-        Kitchen &amp; Laundry
+        Rough Plumbing
       </div>
       <div class="ind-cat-txt">
-        <p>LDR understands the importance of your kitchen and laundry room, and wants you to enjoy them in style. Introducing new designs every couple of months, make sure to keep coming back to check out our collection!</p>
+        <p>LDR manufactures a comprehensive line of fittings, nipples and pipe that are UL and FM certified. Black, galvanized, copper, brass, and plastic; when needing parts for any repairs or new projects, LDR has you covered!</p>
       </div>
     </div>
   </div>  <!--  end container  -->
@@ -43,7 +43,23 @@
         Shower &amp; Bath
       </div>
       <div class="ind-cat-txt">
-        <p>LDR carries a complete line of bath and shower products, including showerheads, caddies, pedestals, toilet seats, shelving, storage and safety. Always keeping up with the latest trends but also offering older models for those who need a quick replacement, we make it a room you never want to leave!</p>
+        <p>LDR carries a complete line of bath and shower products, including showerheads, caddies, faucets, toilet seats, shelving, storage and safety. Always keeping up with the latest trends but also offering older models for those who need a quick replacement, we make it a room you never want to leave!</p>
+      </div>
+    </div>
+  </div>  <!--  end container  -->
+</div>
+
+<div class="ind-cat ind-kitchenlaundry">
+  <div class="container">
+    <div class="ind-cat-img">
+      <img src="<?php bloginfo('template_directory')?>/images/web_thumb_img/industries-kitchenlaundry.jpg">
+    </div>
+    <div class="ind-cat-desc">
+      <div class="ind-cat-title">
+        Kitchen &amp; Laundry
+      </div>
+      <div class="ind-cat-txt">
+        <p>LDR understands the importance of your kitchen and laundry room, and wants you to enjoy them in style. We introduce new designs regularly, so make sure to keep coming back to check out our collection!</p>
       </div>
     </div>
   </div>  <!--  end container  -->
@@ -65,21 +81,7 @@
   </div>  <!--  end container  -->
 </div>
 
-<div class="ind-cat ind-roughplumbing">
-  <div class="container">
-    <div class="ind-cat-img">
-      <img src="<?php bloginfo('template_directory')?>/images/web_thumb_img/industries-rough.jpg">
-    </div>
-    <div class="ind-cat-desc">
-      <div class="ind-cat-title">
-        Rough Plumbing
-      </div>
-      <div class="ind-cat-txt">
-        <p>LDR manufactures a comprehensive line of fittings, nipples and pipe that are UL and FM certified. Black, galvanized, copper, brass, and plastic; when needing parts for any repairs or new projects, LDR has you covered!</p>
-      </div>
-    </div>
-  </div>  <!--  end container  -->
-</div>
+
 
 <div class="ind-cat ind-pipedecor">
   <div class="container">

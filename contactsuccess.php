@@ -27,7 +27,7 @@
         $response = "";
 
         $message_sent    = "Thanks! Your message has been sent.";
-        $message_spam    = "Spam detected. Please send your inquiry to sales@ldrind.com";
+        $message_spam    = "Spam detected. Please send your inquiry to orders@ldrind.com";
         include 'phpsnippet/google_captcha.php';
         //user posted variables
         $name = $_POST['contact-name'];
@@ -38,7 +38,7 @@
         $contents = "Name: $name \nEmail: $email \nPhone: $phone \nCompany: $company \nMessage: $message";
 
         //php mailer variables
-        $to = "akennedy@ldrind.com";
+        $to = "orders@ldrind.com";
         $subject = "LDR web contact from $name";
         $headers = array(
           'Reply-To: '.$email
@@ -65,41 +65,11 @@
       </div>
       <div class='contact-phaddress-address'>
         <p>600 N. Kilbourn Avenue, Chicago, IL 60624</p>
-        <p>sales@ldrind.com</p>
+        <p>orders@ldrind.com</p>
       </div>
     </div>
 
   </div>
 </div>
-
-<!-- <div class='contact-salesmanager'>
-  <div class='container'>
-    <div class="contact-salesmanager-section">
-      <span>CONTACT SALES DIRECT</span>
-      <div class="contact-salesmanager-section-underline">
-      </div>
-    </div>
-    <div class='contact-salesmanager-container'> -->
-      <!-- <?php
-      /*
-        global $wpdb;
-        $salesmanager = $wpdb->get_results("SELECT * FROM wp_ldrsalesmanager ORDER BY sort ASC;");
-        foreach ($salesmanager as $salesmanager1){
-          echo "<div class='contact-salesmanager-each'>";
-            echo "<div class='contact-salesmanager-img'>";
-              echo "<a href='mailto:".$salesmanager1->email."'><img class='contact-state-".$salesmanager1->si."' src='".$salesmanager1->img."'></a>";
-            echo "</div>";
-            echo "<div class='contact-salesmanager-name'><span>".ucfirst($salesmanager1->first)." ".ucfirst($salesmanager1->last)."</span></div>";
-            echo "<div class='contact-salesmanager-title'><span>".ucfirst($salesmanager1->title)."</span></div>";
-            echo "<div class='contact-salesmanager-email'><a href='mailto:".$salesmanager1->email."'>".$salesmanager1->email."</a></div>";
-            echo "<div class='contact-salesmanager-phone'><span>".$salesmanager1->phone."</span></div>";
-            echo "<div class='contact-salesmanager-text'><span>".strtoupper($salesmanager1->text)."</span></div>";
-          echo "</div>";
-        }
-        */
-      ?> -->
-    <!-- </div> -->
-  <!-- </div>   -->
-<!-- </div>   -->
 
 <?php get_footer();?>

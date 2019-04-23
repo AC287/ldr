@@ -61,7 +61,7 @@
       </div>
       <div class='contact-phaddress-address'>
         <p>600 N. Kilbourn Avenue, Chicago, IL 60624</p>
-        <p>sales@ldrind.com</p>
+        <p>orders@ldrind.com</p>
       </div>
     </div>
 

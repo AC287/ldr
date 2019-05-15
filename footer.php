@@ -18,7 +18,7 @@
           <a href="<?php echo home_url();?>/about/" class="footer1-maintxt">About</a>
           <ul class="footer1-subtxt">
             <li><a href="<?php echo home_url();?>/about/">Who We Are</a></li>
-            <li><a href="<?php echo home_url();?>/team/">Our Team</a></li>
+            <!-- <li><a href="<?php // echo home_url();?>/team/">Our Team</a></li> -->
             <!-- <li><a href="">Retailers Who Carry Us</a></li> -->
             <li><a href="<?php echo home_url();?>/career/">Careers</a></li>
             <li><a href="<?php echo home_url();?>/tradeshows/">News</a></li>

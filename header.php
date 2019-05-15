@@ -94,21 +94,23 @@
                     </div>
                   </a>
                 </div>
-                <div class="hmn-container">
-                  <a class="team" href="<?php echo home_url();?>/team/">
+                <!-- <div class="hmn-container">
+                  <a class="team" href="<?php //echo home_url();?>/team/">
                     <div class="header-navi-title">OUR TEAM</div>
                     <div class="hnt-selector-container">
                       <?php
+                      /*
                       if(in_array('team',$curLocationArr)){
                         $display = "block";
                       } else {
                         $display = "none";
                       }
                       echo "<div class='header-navi-selector' style='display:".$display."'></div>";
+                      */
                       ?>
                     </div>
                   </a>
-                </div>
+                </div> -->
                 <div class="hmn-container">
                   <a class="brands" href="<?php echo home_url();?>/brands/">
                     <div class="header-navi-title">BRANDS</div>

@@ -110,9 +110,9 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-9">
+			<div class="col-sm-8">
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-6">
 						<div class="about-locations-localimg">
 							<img src="<?php bloginfo('template_directory')?>/images/about/ontario.png">
 						</div>
@@ -121,7 +121,7 @@
 							<p>Distribution Center</p>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-6">
 						<div class="about-locations-localimg">
 							<img src="<?php bloginfo('template_directory')?>/images/about/illinois.png">
 						</div>
@@ -131,15 +131,7 @@
 							<p>Distribution Center</p>
 						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="about-locations-localimg">
-							<img src="<?php bloginfo('template_directory')?>/images/about/newyork.png">
-						</div>
-						<div class="about-locations-type">
-							<p class="about-locations-type-title">NEW YORK, NY</p>
-							<p>Corporate Headquarters</p>
-						</div>
-					</div>
+
 				</div>
 				<div class="row">
 					<div class="col-sm-6">
@@ -162,7 +154,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-4">
 				<div class="about-locations-localimg">
 					<img src="<?php bloginfo('template_directory')?>/images/about/china.png">
 				</div>

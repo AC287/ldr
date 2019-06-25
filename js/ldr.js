@@ -131,13 +131,6 @@ if(s3param) {
   $(s3paramInner).find('img').attr('src','https://storage.codacambridge.com/files/icons/chev-down.png');
 }
 
-// if(s4param) {
-//
-//   $('.s4i-'+s4param).toggleClass('show');
-//
-//   $(s4paramInner).children('img').attr('src','https://storage.codacambridge.com/files/icons/chev-down.png');
-// }
-
 switch(paramCounter) {
   //This will highlight current selection.
   case 1:
@@ -394,48 +387,6 @@ clickToNext.click(function(){
   }
 
 })
-
-/* // - - - Slick code for modal section - - - */
-// $('.ip-modal-content').slick({
-//   // dots: true,
-//   infinite: true,
-//   speed: 500,
-//   fade: true,
-//   cssEase: 'linear'
-// });
-
-/*
-- - - TEAM PAGE - - -
-*/
-
-// $('.team-crop').click(function(){
-//   var displayingPerson = '.team-'+$(this).attr('id');
-//   // console.log($(this).attr('id'));
-//   $('.team-modal').css('display','block');
-//   $(displayingPerson).css('display', 'block');
-//
-//   $('.team-close').click(function(){
-//     $('.team-modal').css('display','none');
-//     $(displayingPerson).css('display','none');
-//   })
-// })
-
-//
-// $('.team-salesmanager-each img').bind({
-//   mouseenter: function(){
-//     var currState = '#'+$(this).attr('class').split('-')[2]+' .cls-1';
-//     $(currState).css({
-//       // 'transform':'scale(1.5)',
-//       'fill':'rgb(112, 189, 255)',
-//     })
-//   },
-//   mouseleave: function(){
-//     // var currState = '#'+$(this).attr('class').split(' ')[1].split('-')[2]+' .cls-1';
-//     $('.cls-1').css({
-//       'fill':'#036',
-//     })
-//   }
-// });
 
 
 /* - - - CAREER EXPAND SECTION - - - */

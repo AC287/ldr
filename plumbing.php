@@ -52,14 +52,14 @@
 <div class="ind-cat ind-kitchenlaundry">
   <div class="container">
     <div class="ind-cat-img">
-      <img src="<?php bloginfo('template_directory')?>/images/web_thumb_img/industries-kitchenlaundry.jpg">
+      <img src="<?php bloginfo('template_directory')?>/images/web_thumb_img/industries-faucet.jpg">
     </div>
     <div class="ind-cat-desc">
       <div class="ind-cat-title">
-        Kitchen &amp; Laundry
+        Kitchen
       </div>
       <div class="ind-cat-txt">
-        <p>LDR understands the importance of your kitchen and laundry room, and wants you to enjoy them in style. We introduce new designs regularly, so make sure to keep coming back to check out our collection!</p>
+        <p>LDR understands the importance of your kitchen, and wants you to enjoy them in style. We introduce new designs regularly, so make sure to keep coming back to check out our collection!</p>
       </div>
     </div>
   </div>  <!--  end container  -->

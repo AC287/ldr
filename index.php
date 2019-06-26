@@ -24,39 +24,13 @@ include 'phpsnippet/serverlocation.php';
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
-    <li data-target="#myCarousel" data-slide-to="4"></li>
-    <!-- <li data-target="#myCarousel" data-slide-to="5"></li> -->
-    <!-- <li data-target="#myCarousel" data-slide-to="3"></li> -->
+
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
 
     <div class="item active">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_rough.jpg">
-      <div class="index-banner-textbox ibt-rough">
-        <div class="ibt-text">
-          <span>NOT ROUGH AROUND THE EDGES</span>
-        </div>
-        <div class="ibt-underline">
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_merch.jpg">
-      <div class="index-banner-textbox ibt-merch">
-        <div class="ibt-text">
-          <span>BEST IN CLASS MERCHANDISING</span>
-        </div>
-        <div class="ibt-underline">
-        </div>
-      </div>
-    </div>
-
-    <div class="item">
       <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_fashion.jpg">
       <div class="index-banner-textbox ibt-fashion">
         <div class="ibt-text">
@@ -78,21 +52,6 @@ include 'phpsnippet/serverlocation.php';
       </div>
     </div>
 
-    <div class="item">
-      <img src="<?php bloginfo('template_directory')?>/images/banners/ldr_pipedecor.jpg">
-      <div class="index-banner-textbox ibt-pipedecor">
-        <div class="ibt-text">
-          <span>TRADITIONAL COMPANY WITH UNTRADITIONAL IDEAS</span>
-        </div>
-        <div class="ibt-underline">
-        </div>
-      </div>
-    </div>
-
-
-    <!-- <div class="item"> -->
-      <!-- <img src="images/image001.jpg"> -->
-    <!-- </div> -->
 
   </div>
 
@@ -122,7 +81,7 @@ include 'phpsnippet/serverlocation.php';
             <p>Rough</p>
           </div>
           <div class="gc-indextxt">
-            <p>LDR's rough line is comprised of over 4,000 rough plumbing sku's made from black, galvanized, copper, brass, and plastic.</p>
+            <p>LDR's rough line is comprised of thousands of plumbing sku's made from copper, brass, and plastic.</p>
             <p>With LDR's rail system which includes channel and rail cards, and their slanted cut case box design, the rough products are easy to find even on lower shelves.</p>
           </div>
         </div>
@@ -180,12 +139,12 @@ include 'phpsnippet/serverlocation.php';
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <div class="index-midcategory" data-toggle="collapse" data-target="#imc-indexretail">
+        <div class="index-midcategory">
           <!-- <img src="<?php //bloginfo('template_directory')?>/images/distribution01.png"></img> -->
           <div class="index-midcategory-imgholder index-indexretail"></div>
           <div class="mc-header" >RETAIL</div>
         </div>
-        <div class="collapse index-midcategory-contents" id="imc-indexretail">
+        <div class="index-midcategory-contents" id="imc-indexretail">
           <!-- <div class="mc-border">INDUSTRY DISTRIBUTORS <br/>CARRY CAMBRIDGE</div> -->
           <div class="mc-txt">
             <p>LDR has a firm understanding of the retail marketplace giving your retail space a great edge.</p>
@@ -195,12 +154,12 @@ include 'phpsnippet/serverlocation.php';
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="index-midcategory" data-toggle="collapse" data-target="#imc-index2step">
+        <div class="index-midcategory">
           <!-- <img src="<?php bloginfo('template_directory')?>/images/retail01.png"></img> -->
           <div class="index-midcategory-imgholder index-index2step"></div>
           <div class="mc-header" >2 STEP DISTRIBUTION</div>
         </div>
-        <div class="collapse index-midcategory-contents" id="imc-index2step">
+        <div class="index-midcategory-contents" id="imc-index2step">
           <!-- <div class="mc-border">INTERNATIONAL RETAILERS <br/>SELL CAMBRIDGE</div> -->
           <div class="mc-txt">
             <p>LDR's two-step distribution process keeps the product easily accessible to the distributor. Global access points, and local headquartered support allow for quick turn around and instant service.</p>
@@ -208,12 +167,12 @@ include 'phpsnippet/serverlocation.php';
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="index-midcategory" data-toggle="collapse" data-target="#imc-indexwholesale">
+        <div class="index-midcategory">
           <!-- <img src="<?php bloginfo('template_directory')?>/images/oem01.png"></img> -->
           <div class="index-midcategory-imgholder index-indexwholesale"></div>
           <div class="mc-header" >WHOLESALE</div>
         </div>
-        <div class="collapse index-midcategory-contents" id="imc-indexwholesale">
+        <div class="index-midcategory-contents" id="imc-indexwholesale">
           <!-- <div class="mc-border">ORIGINAL EQUIPMENT <br/>MANUFACTURER</div> -->
           <div class="mc-txt">
             <p>LDR's sister company Cambridge caters to the wholesale market by offering bulk options on many of the Rough Plumbing sku's. <a href="<?php echo $cambridgeSite; ?>">Click here</a> to check out their website.</p>

@@ -27,7 +27,7 @@
         Rough Plumbing
       </div>
       <div class="ind-cat-txt">
-        <p>LDR manufactures a comprehensive line of fittings, nipples and pipe that are UL and FM certified. Black, galvanized, copper, brass, and plastic; when needing parts for any repairs or new projects, LDR has you covered!</p>
+        <p>LDR manufactures a comprehensive line of fittings, nipples and pipe that are UL and FM certified. Copper, brass, and plastic; when needing parts for any repairs or new projects, LDR has you covered!</p>
       </div>
     </div>
   </div>  <!--  end container  -->
@@ -76,24 +76,6 @@
       </div>
       <div class="ind-cat-txt">
         <p>LDR makes repair look easy. We offer retail ready color coded carded packaging spanning toilet, water supply, bath, sink, faucet, pipe repair,  tools, and more. LDR has it all! </p>
-      </div>
-    </div>
-  </div>  <!--  end container  -->
-</div>
-
-
-
-<div class="ind-cat ind-pipedecor">
-  <div class="container">
-    <div class="ind-cat-img">
-      <img src="<?php bloginfo('template_directory')?>/images/web_thumb_img/industries-pipedecor-100.jpg">
-    </div>
-    <div class="ind-cat-desc">
-      <div class="ind-cat-title">
-        Pipe D&eacute;cor
-      </div>
-      <div class="ind-cat-txt">
-        <p>Pipe D&eacute;cor was founded by LDR as an idea to help hobbyists find the products they need for their do-it-yourself, Pinterest inspired projects. It is a way to showcase your creativity all while creating functional and visually aesthetic pieces that last.</p>
       </div>
     </div>
   </div>  <!--  end container  -->

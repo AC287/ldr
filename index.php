@@ -138,7 +138,7 @@ include 'phpsnippet/serverlocation.php';
 <div id="mid-category">
   <div class="container">
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <div class="index-midcategory">
           <!-- <img src="<?php //bloginfo('template_directory')?>/images/distribution01.png"></img> -->
           <div class="index-midcategory-imgholder index-indexretail"></div>
@@ -153,7 +153,7 @@ include 'phpsnippet/serverlocation.php';
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <div class="index-midcategory">
           <!-- <img src="<?php bloginfo('template_directory')?>/images/retail01.png"></img> -->
           <div class="index-midcategory-imgholder index-index2step"></div>
@@ -163,19 +163,6 @@ include 'phpsnippet/serverlocation.php';
           <!-- <div class="mc-border">INTERNATIONAL RETAILERS <br/>SELL CAMBRIDGE</div> -->
           <div class="mc-txt">
             <p>LDR's two-step distribution process keeps the product easily accessible to the distributor. Global access points, and local headquartered support allow for quick turn around and instant service.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="index-midcategory">
-          <!-- <img src="<?php bloginfo('template_directory')?>/images/oem01.png"></img> -->
-          <div class="index-midcategory-imgholder index-indexwholesale"></div>
-          <div class="mc-header" >WHOLESALE</div>
-        </div>
-        <div class="index-midcategory-contents" id="imc-indexwholesale">
-          <!-- <div class="mc-border">ORIGINAL EQUIPMENT <br/>MANUFACTURER</div> -->
-          <div class="mc-txt">
-            <p>LDR's sister company Cambridge caters to the wholesale market by offering bulk options on many of the Rough Plumbing sku's. <a href="<?php echo $cambridgeSite; ?>">Click here</a> to check out their website.</p>
           </div>
         </div>
       </div>
